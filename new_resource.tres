@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TurnData" load_steps=2 format=3 uid="uid://cdpiwi7ss1uns"]
+
+[ext_resource type="Script" path="res://TurnData.cs" id="1_f7y3p"]
+
+[resource]
+script = ExtResource("1_f7y3p")
+fighterName = "Knuckles"
+Level = 1
+Speed = 5
+Attack = 9001
+Defense = 1
+maxHP = 9999
+currentHP = 9999
+maxMP = 2
+currentMP = 2
+maxCommands = 12
+commands = null
+inventorySize = 12
+inventory = null
