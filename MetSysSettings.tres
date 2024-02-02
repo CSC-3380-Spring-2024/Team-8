@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b0ecwuml5mivh"]
+
+[ext_resource type="Script" path="res://addons/MetroidvaniaSystem/Scripts/Settings.gd" id="1_ipag0"]
+[ext_resource type="Resource" uid="uid://bt6s3nd8xo6b" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/Theme.tres" id="2_dstm8"]
+
+[resource]
+script = ExtResource("1_ipag0")
+theme = ExtResource("2_dstm8")
+map_root_folder = "res://"
+in_game_cell_size = Vector2(1152, 648)
+collectible_list = Array[Dictionary]([])

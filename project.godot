@@ -15,6 +15,14 @@ run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MetSys="*res://addons/MetroidvaniaSystem/Nodes/Singleton.tscn"
+
 [dotnet]
 
 project/assembly_name="Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/MetroidvaniaSystem/plugin.cfg")
