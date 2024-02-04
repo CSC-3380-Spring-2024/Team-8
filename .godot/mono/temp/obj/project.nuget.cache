@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "8IgZN4CURzM8N/4I/xLsiJi6mgrniGXIMlilKRicn6edIfTxHrwgbYQj7Dmo+0ARuC3AMY6i/PexgTDx9GwFeg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\trist\\Documents\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\trist\\.nuget\\packages\\godot.sourcegenerators\\4.2.0\\godot.sourcegenerators.4.2.0.nupkg.sha512",
+    "C:\\Users\\trist\\.nuget\\packages\\godotsharp\\4.2.0\\godotsharp.4.2.0.nupkg.sha512",
+    "C:\\Users\\trist\\.nuget\\packages\\godotsharpeditor\\4.2.0\\godotsharpeditor.4.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

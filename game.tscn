@@ -22,10 +22,12 @@ size = Vector2(1205, 1200)
 [node name="Game" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(411, 491)
+position = Vector2(410, 491)
 scale = Vector2(0.33335, 0.140237)
 script = ExtResource("1_a1ika")
 JumpHeight = -250.0
+acceleration = 5.0
+friction = 7.0
 
 [node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
 scale = Vector2(0.749962, 1.78269)
@@ -35,6 +37,8 @@ texture = ExtResource("2_wd56v")
 shape = SubResource("CapsuleShape2D_tvo1y")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+offset = Vector2(0, -150.49)
+position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(566, 612)

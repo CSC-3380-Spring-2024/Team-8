@@ -1,0 +1,8 @@
+res://game.tscn
+res://battle.tscn
+res://Command.cs
+res://Global.cs
+res://Item.cs
+res://PlayerMove.cs
+res://StartBattle.cs
+res://TurnData.cs

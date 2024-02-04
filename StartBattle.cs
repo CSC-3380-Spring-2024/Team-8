@@ -43,7 +43,9 @@ public partial class StartBattle : Area2D
 	public void _on_body_entered(Node2D body)
 	{
 		GD.Print("body_entered");
+		Global.state = Global.gameState.Battle_Select;
 		PackedScene scene = GD.Load<PackedScene>("res://battle.tscn");
+		
 		Node loadedScene = scene.Instantiate();
 		this.AddChild(loadedScene);
 	}

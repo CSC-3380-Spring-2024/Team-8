@@ -4,7 +4,7 @@ using System;
 public partial class PlayerMove : CharacterBody2D
 {
 	[Export]
-	public const float Speed = 300.0f;
+	public float Speed = 300.0f;
 
 	[Export]
 	public float JumpHeight = 500;
@@ -12,6 +12,10 @@ public partial class PlayerMove : CharacterBody2D
 	public float timeToPeak = 0.5f;
 	[Export]
 	public float timeToFall = 0.5f;
+	[Export]
+	public float acceleration = 0.5f;
+	[Export]
+	public float friction = 0.25f;
 
 	float JumpVelocity;
 	float JumpGravity;
@@ -40,6 +44,10 @@ public partial class PlayerMove : CharacterBody2D
 	}
 	public override void _PhysicsProcess(double delta)
 	{
+		if(Global.state != Global.gameState.Exploration)
+		{
+			return;
+		}
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.
@@ -55,11 +63,11 @@ public partial class PlayerMove : CharacterBody2D
 		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 		if (direction != Vector2.Zero)
 		{
-			velocity.X = direction.X * Speed;
+			velocity.X = Mathf.MoveToward(velocity.X ,direction.X * Speed, acceleration);
 		}
 		else
 		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+			velocity.X = Mathf.MoveToward(Velocity.X, 0, friction);
 		}
 
 		Velocity = velocity;
