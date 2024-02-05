@@ -7,6 +7,11 @@ public partial class TurnData : Resource
 
 	[Export] public String fighterName;
 	[Export] public int Level = 1;
+	public enum type{
+		PLAYER, ENEMY
+	}
+	[Export]
+	public type TurnType;
 	[Export] public int Speed;
 	[Export] public int Attack;
 	[Export] public int Defense;

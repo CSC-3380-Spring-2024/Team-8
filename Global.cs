@@ -10,6 +10,8 @@ public partial class Global : Node
 		Battle_Execute,
 		Pause
 	}
+
+	public static TurnData[] partyTurns = new TurnData[4];
 	public static gameState state;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -19,5 +21,10 @@ public partial class Global : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+	}
+
+	public static void add_party_member(TurnData member, int partyID)
+	{
+		partyTurns[partyID] = member;
 	}
 }
