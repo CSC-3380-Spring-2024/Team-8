@@ -1,22 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707097185
+::res://::1707232751
 7939.png::CompressedTexture2D::9117081836005281491::1706891784::1706891842::1::::<><>::
-battle.tscn::PackedScene::6847695980718730469::1707097184::0::1::::<><>::uid://ci5r77kkoj0i2::::res://Fonts/Early GameBoy.ttf
+battle.tscn::PackedScene::6847695980718730469::1707186405::0::1::::<><>::uid://ci5r77kkoj0i2::::res://Fonts/Early GameBoy.ttf<>res://BattleScreen.cs
+BattleScreen.cs::CSharpScript::-1::1707195991::0::1::::<>Control<>::
 Bob_T7FR.webp::CompressedTexture2D::1206921953487970226::1706891784::1706891842::1::::<><>::
 Command.cs::CSharpScript::-1::1706891784::0::1::::<>Node<>::
 deepfried_1706745825604.jpg::CompressedTexture2D::139845872344558659::1706891784::1706891842::1::::<><>::
-game.tscn::PackedScene::7407479772524984883::1707097184::0::1::::<><>::res://PlayerMove.cs<>uid://d25nagyvblxsl::::res://7939.png<>res://TurnComponent.cs<>uid://b80igxvurkdn::::res://deepfried_1706745825604.jpg<>uid://cdpiwi7ss1uns::::res://new_resource.tres<>uid://rgv3fpfrxk0q::::res://Bob_T7FR.webp<>res://StartBattle.cs<>res://TurnData.cs
+game.tscn::PackedScene::7407479772524984883::1707195987::0::1::::<><>::res://PlayerMove.cs<>uid://d25nagyvblxsl::::res://7939.png<>res://TurnComponent.cs<>uid://cdpiwi7ss1uns::::res://new_resource.tres<>uid://rgv3fpfrxk0q::::res://Bob_T7FR.webp<>res://StartBattle.cs<>res://TurnData.cs<>uid://cgtr3mm5v33hs::::res://New Piskel(4).png
 Global.cs::CSharpScript::-1::1707072859::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::3844734774414503382::1706891784::1706891842::1::::<><>::
 Item.cs::CSharpScript::-1::1706891784::0::1::::Item<>Node<>::
-MapData.txt::TextFile::-1::1707095848::0::1::::<><>::
+MapData.txt::TextFile::-1::1707195987::0::1::::<><>::
 MetSysSettings.tres::Resource::4149561076656607633::1706891938::0::1::::<><>::res://addons/MetroidvaniaSystem/Scripts/Settings.gd<>uid://bt6s3nd8xo6b::::res://addons/MetroidvaniaSystem/Themes/Exquisite/Theme.tres
+New Piskel(4).png::CompressedTexture2D::5234280447858012768::1707174391::1707174392::1::::<><>::
 new_resource.tres::Resource/Resource::5014899058482714956::1706891784::0::1::::<><>::res://TurnData.cs
 PlayerMove.cs::CSharpScript::-1::1707015537::0::1::::<>CharacterBody2D<>::
 README.md::TextFile::-1::1706891784::0::1::::<><>::
 StartBattle.cs::CSharpScript::-1::1707079960::0::1::::<>Area2D<>::
-TurnComponent.cs::CSharpScript::-1::1707072847::0::1::::<>Node<>::
-TurnData.cs::CSharpScript::-1::1707072996::0::1::::TurnData<>Resource<>::
+TurnComponent.cs::CSharpScript::-1::1707111859::0::1::::<>Node<>::
+TurnData.cs::CSharpScript::-1::1707112818::0::1::::TurnData<>Resource<>::
 ::res://addons/::1706891885
 ::res://addons/MetroidvaniaSystem/::1706891905
 Icon.png::CompressedTexture2D::5312585646964272010::1706891885::1706891905::1::::<><>::
@@ -42,7 +44,7 @@ CollectibleFoundItem.tscn::PackedScene::6324390053996725631::1706891885::0::1:::
 RoomInstance.tscn::PackedScene::3663775679193023938::1706891885::0::1::::<><>::res://addons/MetroidvaniaSystem/Scripts/RoomInstance.gd
 RoomPreview.tscn::PackedScene::4068944844568016361::1706891886::0::1::::<><>::uid://dfyoc5jqnnpf5::::res://addons/MetroidvaniaSystem/Database/DatabaseTheme.tres
 Singleton.tscn::PackedScene::6581724622763281895::1706891886::0::1::::<><>::res://addons/MetroidvaniaSystem/Scripts/MetroidvaniaSystem.gd
-::res://addons/MetroidvaniaSystem/Scripts/::1707074063
+::res://addons/MetroidvaniaSystem/Scripts/::1707166099
 CollectibleElement.gd::GDScript::-1::1706891886::0::1::::<>PanelContainer<>::
 CollectibleFoundItem.gd::GDScript::-1::1706891886::0::1::::<>PanelContainer<>::
 CustomElementManager.gd::GDScript::-1::1706891886::0::1::::<>RefCounted<>::
@@ -53,7 +55,7 @@ MapTheme.gd::GDScript::-1::1706891886::0::1::::MapTheme<>Resource<>::
 MapView.gd::GDScript::-1::1706891886::0::1::::<>Control<>::
 MetroidvaniaSystem.gd::GDScript::-1::1706891886::0::1::::MetroidvaniaSystem<>Node<>::
 PlayerLocationInstance.gd::GDScript::-1::1706891886::0::1::::<>Node2D<>::
-RoomDrawer.gd::GDScript::-1::1707074063::0::1::::<>RefCounted<>::
+RoomDrawer.gd::GDScript::-1::1707166099::0::1::::<>RefCounted<>::
 RoomInstance.gd::GDScript::-1::1706891886::0::1::::<>Node2D<>::
 SaveData.gd::GDScript::-1::1706891886::0::1::::<>RefCounted<>::
 Settings.gd::GDScript::-1::1706891886::0::1::::<>Resource<>::
@@ -202,7 +204,7 @@ C.png::CompressedTexture2D::8016230933476772509::1706891903::1706891905::1::::<>
 D.png::CompressedTexture2D::1063815499595436499::1706891904::1706891905::1::::<><>::
 SavePoint.png::CompressedTexture2D::2727848025482245982::1706891904::1706891905::1::::<><>::
 Teleport.png::CompressedTexture2D::564225021773146727::1706891904::1706891905::1::::<><>::
-::res://Fonts/::1707099444
+::res://Fonts/::1707099521
 Early GameBoy.ttf::FontFile::5397374480062935671::1388882366::1707099521::1::::<><>::
 Early-GameBoy.png::FontFile::1918766162074409232::1707099351::1707099444::1::::<><>::
 ::res://SampleProject/::1706891883

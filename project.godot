@@ -17,6 +17,7 @@ metroidvania_system/settings_file="res://MetSysSettings.tres"
 config/name="Super Group 8's Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
@@ -71,7 +72,15 @@ ui_down={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Background"
+2d_render/layer_2="Window(HUD)"
+2d_render/layer_3="Sprites1"
+2d_render/layer_4="Sprites2"
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true

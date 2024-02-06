@@ -4,18 +4,18 @@ using System;
 public partial class PlayerMove : CharacterBody2D
 {
 	[Export]
-	public float Speed = 300.0f;
+	float Speed = 300.0f;
 
 	[Export]
-	public float JumpHeight = 500;
+	float JumpHeight = -250;
 	[Export]
-	public float timeToPeak = 0.5f;
+	float timeToPeak = 0.5f;
 	[Export]
-	public float timeToFall = 0.5f;
+	float timeToFall = 0.5f;
 	[Export]
-	public float acceleration = 0.5f;
+	float acceleration = 10f;
 	[Export]
-	public float friction = 0.25f;
+	float friction = 12f;
 
 	float JumpVelocity;
 	float JumpGravity;

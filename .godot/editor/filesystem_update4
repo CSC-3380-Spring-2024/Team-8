@@ -1,5 +1,6 @@
 res://game.tscn
 res://battle.tscn
+res://BattleScreen.cs
 res://Command.cs
 res://Global.cs
 res://Item.cs
@@ -7,5 +8,3 @@ res://PlayerMove.cs
 res://StartBattle.cs
 res://TurnComponent.cs
 res://TurnData.cs
-res://addons/MetroidvaniaSystem/Scripts/RoomDrawer.gd
-res://BattleScreen.cs
