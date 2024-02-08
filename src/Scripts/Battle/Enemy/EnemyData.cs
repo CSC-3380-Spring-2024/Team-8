@@ -1,0 +1,14 @@
+using Godot;
+using Godot.Collections;
+using System;
+[GlobalClass]
+
+public partial class EnemyData : TurnData
+{
+	new type TurnType = type.ENEMY;
+	[Export]public Resource sprite;
+	
+	[Export]public Element[] elements = {new Element(Element.element.Fire), new Element(Element.element.Energy), new Element(Element.element.Ice), new Element(Element.element.Gale), new Element(Element.element.Physical)};
+}
+
+

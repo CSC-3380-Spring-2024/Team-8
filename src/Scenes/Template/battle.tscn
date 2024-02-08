@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4tcs1rh4107b"]
 
-[ext_resource type="FontFile" uid="uid://ci5r77kkoj0i2" path="res://Fonts/Early GameBoy.ttf" id="1_0w6if"]
-[ext_resource type="Script" path="res://BattleScreen.cs" id="1_w1kwq"]
+[ext_resource type="Script" path="res://src/Scripts/Battle/General/BattleScreen.cs" id="1_bams4"]
+[ext_resource type="FontFile" uid="uid://ci5r77kkoj0i2" path="res://src/Fonts/Early GameBoy.ttf" id="2_d2omv"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ offset_right = -1152.0
 offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_w1kwq")
+script = ExtResource("1_bams4")
 
 [node name="Menu" type="CanvasLayer" parent="."]
 
@@ -201,7 +201,7 @@ visible = false
 layout_mode = 1
 offset_right = 1020.0
 offset_bottom = 75.0
-theme_override_fonts/font = ExtResource("1_0w6if")
+theme_override_fonts/font = ExtResource("2_d2omv")
 theme_override_font_sizes/font_size = 45
 text = "Hello World"
 

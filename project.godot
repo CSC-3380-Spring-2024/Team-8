@@ -10,15 +10,15 @@ config_version=5
 
 [addons]
 
-metroidvania_system/settings_file="res://MetSysSettings.tres"
+metroidvania_system/settings_file="res://src/Resources/Addons/MetSysSettings.tres"
 
 [application]
 
 config/name="Unit V.I.X.E.N"
-run/main_scene="res://game.tscn"
+run/main_scene="res://src/Scenes/game.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 run/max_fps=60
-config/icon="res://icon.svg"
+config/icon="res://src/Assets/Proto/icon.svg"
 
 [autoload]
 

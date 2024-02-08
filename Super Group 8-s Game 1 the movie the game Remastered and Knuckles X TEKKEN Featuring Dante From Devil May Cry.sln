@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry", "Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj", "{3C0E6B78-C6A4-4DA9-ADBD-D4FF59D21552}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry", "Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj", "{1A9C8408-F30C-4B6E-B005-795A0C266D9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3C0E6B78-C6A4-4DA9-ADBD-D4FF59D21552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C0E6B78-C6A4-4DA9-ADBD-D4FF59D21552}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C0E6B78-C6A4-4DA9-ADBD-D4FF59D21552}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{3C0E6B78-C6A4-4DA9-ADBD-D4FF59D21552}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{3C0E6B78-C6A4-4DA9-ADBD-D4FF59D21552}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{3C0E6B78-C6A4-4DA9-ADBD-D4FF59D21552}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{1A9C8408-F30C-4B6E-B005-795A0C266D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A9C8408-F30C-4B6E-B005-795A0C266D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A9C8408-F30C-4B6E-B005-795A0C266D9D}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{1A9C8408-F30C-4B6E-B005-795A0C266D9D}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{1A9C8408-F30C-4B6E-B005-795A0C266D9D}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{1A9C8408-F30C-4B6E-B005-795A0C266D9D}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

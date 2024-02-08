@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="TurnData" load_steps=2 format=3 uid="uid://cdpiwi7ss1uns"]
 
-[ext_resource type="Script" path="res://TurnData.cs" id="1_f7y3p"]
+[ext_resource type="Script" path="res://src/Scripts/Battle/General/TurnData.cs" id="1_f7y3p"]
 
 [resource]
 script = ExtResource("1_f7y3p")
-fighterName = "Knuckles"
+fighterName = "Vulpes"
 Level = 1
 Speed = 5
 Attack = 9001
