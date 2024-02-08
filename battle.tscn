@@ -79,7 +79,6 @@ layout_mode = 0
 offset_right = 157.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 36
-text = "Sonic"
 
 [node name="Label2" type="Label" parent="Menu/VBoxContainer/HBoxContainer/Panel2"]
 visible = false
@@ -203,7 +202,7 @@ offset_right = 1020.0
 offset_bottom = 75.0
 theme_override_fonts/font = ExtResource("1_0w6if")
 theme_override_font_sizes/font_size = 45
-text = "A MOnster appeared"
+text = "Hello World"
 
 [node name="Control" type="Control" parent="Menu/VBoxContainer/Panel/DialogueBox"]
 anchors_preset = 0

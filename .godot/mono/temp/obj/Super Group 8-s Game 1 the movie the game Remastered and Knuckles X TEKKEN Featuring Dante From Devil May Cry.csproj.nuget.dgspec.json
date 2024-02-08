@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\blink\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj": {}
+    "C:\\Users\\trist\\Documents\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\blink\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj": {
+    "C:\\Users\\trist\\Documents\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\blink\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj",
+        "projectUniqueName": "C:\\Users\\trist\\Documents\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj",
         "projectName": "Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry",
-        "projectPath": "C:\\Users\\blink\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj",
-        "packagesPath": "C:\\Users\\blink\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\blink\\Team-8\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\trist\\Documents\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj",
+        "packagesPath": "C:\\Users\\trist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trist\\Documents\\Team-8\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Users\\trist\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\blink\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\trist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\trist\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,15 +46,15 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.2.1, )"
+              "version": "[4.2.0, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.2.1, )"
+              "version": "[4.2.0, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.2.1, )"
+              "version": "[4.2.0, )"
             }
           },
           "imports": [
@@ -62,26 +68,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

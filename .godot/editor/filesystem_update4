@@ -1,9 +1,7 @@
 res://game.tscn
-res://ChangeSprite.gd
 res://battle.tscn
-res://ChangeTexture.gd
-res://ChangeTexture.cs
 res://BattleScreen.cs
+res://ChangeTexture.cs
 res://Command.cs
 res://Global.cs
 res://Item.cs
@@ -11,4 +9,3 @@ res://PlayerMove.cs
 res://StartBattle.cs
 res://TurnComponent.cs
 res://TurnData.cs
-res://README.md

@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zOf4Onuv9EcdKf0YZZF4JJKCK29oGfUdAkLHKrZfVgHtEUYLQXvaNHM5Y/+K4aJnxn/WuSJbqYaqOm+V2rpjIQ==",
+  "dgSpecHash": "8IgZN4CURzM8N/4I/xLsiJi6mgrniGXIMlilKRicn6edIfTxHrwgbYQj7Dmo+0ARuC3AMY6i/PexgTDx9GwFeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\blink\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj",
+  "projectFilePath": "C:\\Users\\trist\\Documents\\Team-8\\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\blink\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
-    "C:\\Users\\blink\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
-    "C:\\Users\\blink\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512",
-    "C:\\Users\\blink\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\blink\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\blink\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+    "C:\\Users\\trist\\.nuget\\packages\\godot.sourcegenerators\\4.2.0\\godot.sourcegenerators.4.2.0.nupkg.sha512",
+    "C:\\Users\\trist\\.nuget\\packages\\godotsharp\\4.2.0\\godotsharp.4.2.0.nupkg.sha512",
+    "C:\\Users\\trist\\.nuget\\packages\\godotsharpeditor\\4.2.0\\godotsharpeditor.4.2.0.nupkg.sha512"
   ],
   "logs": []
 }
