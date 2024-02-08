@@ -1,6 +1,8 @@
+Path2D
+PathFollow2D
+Node2D
 ColorRect
 TextureRect
-Node2D
 BackBufferCopy
 Button
 Label
