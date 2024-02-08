@@ -1,6 +1,6 @@
 res://src/Scenes/game.tscn
 res://src/Resources/Turn_Data/Enemy/Bob.tres
-res://src/Scenes/Template/battle.tscn
+res://PathLogic.cs
 res://src/Scripts/Battle/Enemy/EnemyData.cs
 res://src/Scripts/Battle/General/BattleScreen.cs
 res://src/Scripts/Battle/General/Element.cs

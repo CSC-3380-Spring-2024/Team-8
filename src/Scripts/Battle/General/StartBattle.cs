@@ -50,7 +50,7 @@ public partial class StartBattle : Area2D
 	{
 		GD.Print("body_entered");
 		Global.state = Global.gameState.Battle_Select;
-		PackedScene scene = GD.Load<PackedScene>("res://battle.tscn");
+		PackedScene scene = GD.Load<PackedScene>("res://src/Scenes/Template/battle.tscn");
 		turns = EnemyTurns.Concat(Global.partyTurns).ToArray();
 		turns = turns.Where(x => x != null).ToArray();
 		GD.Print(turns.Length);
