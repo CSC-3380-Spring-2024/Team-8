@@ -57,6 +57,8 @@ public partial class StartBattle : Area2D
 		turns = sortTurns(turns);
 		GD.Print(turns);
 		Node loadedScene = scene.Instantiate();
+		BattleScreen gameScreen = (BattleScreen)loadedScene;
+		gameScreen.New(EnemyTurns);
 		this.AddChild(loadedScene);
 	}
 

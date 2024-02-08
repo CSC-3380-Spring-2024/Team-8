@@ -1,10 +1,13 @@
+ColorRect
+TextureRect
+Node2D
+BackBufferCopy
+Button
+Label
+HFlowContainer
 TileMap
 Control
 VBoxContainer
-TextureRect
-Label
 Panel
-Button
 Node
 CanvasLayer
-ColorRect
