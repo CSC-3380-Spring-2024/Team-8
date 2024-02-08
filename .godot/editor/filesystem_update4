@@ -12,3 +12,11 @@ res://src/Scripts/Global/Global.cs
 res://src/Scripts/Overworld/Player/ChangeTexture.cs
 res://src/Scripts/Overworld/Player/PlayerMove.cs
 res://src/Scripts/Overworld/Player/TurnComponent.cs
+res://src/Scenes/Template/enemy_template.tscn
+res://src/Scripts/Battle/Enemy/enemy_template.cs
+res://src/Scripts/Battle/General/Resource Scripts/Element.cs
+res://src/Scripts/Battle/General/Resource Scripts/Item.cs
+res://src/Scripts/Battle/General/Resource Scripts/TurnData.cs
+res://src/Scripts/Battle/Player/Armor.cs
+res://src/Scripts/Battle/Player/playerData.cs
+res://src/Scripts/Overworld/Enemies/PathLogic.cs

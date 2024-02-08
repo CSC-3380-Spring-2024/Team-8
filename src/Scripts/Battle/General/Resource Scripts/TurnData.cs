@@ -13,13 +13,14 @@ public partial class TurnData : Resource
 	public type TurnType = type.PLAYER;
 	[Export] public int Speed;
 	[Export] public int Attack;
-	[Export] public int Defense;
+	[Export] public int PhysDefense;
+	[Export] public int MagicDefense;
 	[Export] public int maxHP;
 	[Export] public int currentHP;
 	[Export] public int maxMP;
 	[Export] public int currentMP;
 	[Export] public int maxCommands;
-	[Export] Command[] commands;
+	[Export] public Command[] commands;
 	[Export] int inventorySize = 12;
-	[Export] Item[] inventory;
+	[Export] public Item[] inventory;
 }

@@ -1,15 +1,14 @@
+Control
+TextureRect
 Camera2D
 TileMap
 Path2D
 PathFollow2D
 Node2D
 ColorRect
-TextureRect
 BackBufferCopy
 Button
 Label
 HFlowContainer
-Control
 VBoxContainer
 Panel
-Node
