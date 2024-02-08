@@ -46,7 +46,7 @@ public partial class StartBattle : Area2D
 		}
         return unsortedTurns;
     }
-	public void _on_body_entered(Node2D body)
+	public void _on_body_entered(CharacterBody2D body)
 	{
 		GD.Print("body_entered");
 		Global.state = Global.gameState.Battle_Select;

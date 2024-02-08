@@ -1,5 +1,5 @@
-res://game.tscn
 res://battle.tscn
+res://game.tscn
 res://BattleScreen.cs
 res://ChangeTexture.cs
 res://Command.cs
@@ -9,3 +9,4 @@ res://PlayerMove.cs
 res://StartBattle.cs
 res://TurnComponent.cs
 res://TurnData.cs
+res://PathLogic.cs
