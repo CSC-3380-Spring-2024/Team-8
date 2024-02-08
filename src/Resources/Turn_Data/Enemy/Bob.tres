@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3 uid="uid://b7cumnaofwp1i"]
+
+[ext_resource type="Script" path="res://src/Scripts/Battle/Enemy/EnemyData.cs" id="1_0vyt1"]
+
+[resource]
+script = ExtResource("1_0vyt1")
+elements = [Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
+, Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
+, Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
+, Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
+, Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
+]
+fighterName = "Bob"
+Level = 1
+Speed = 0
+Attack = 0
+Defense = 0
+maxHP = 0
+currentHP = 0
+maxMP = 0
+currentMP = 0
+maxCommands = 0
+commands = null
+inventorySize = 12
+inventory = null

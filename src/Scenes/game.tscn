@@ -1,3 +1,4 @@
+<<<<<<< HEAD:game.tscn
 [gd_scene load_steps=18 format=3 uid="uid://ddsidyx88hmcx"]
 
 [ext_resource type="Script" path="res://PlayerMove.cs" id="1_a1ika"]
@@ -10,13 +11,32 @@
 [ext_resource type="Script" path="res://PathLogic.cs" id="7_smt5t"]
 [ext_resource type="Script" path="res://TurnData.cs" id="8_2yedx"]
 [ext_resource type="Texture2D" uid="uid://cgtr3mm5v33hs" path="res://New Piskel(4).png" id="9_m3n78"]
+=======
+[gd_scene load_steps=14 format=3 uid="uid://ddsidyx88hmcx"]
+
+[ext_resource type="Script" path="res://src/Scripts/Overworld/Player/PlayerMove.cs" id="1_kdjgv"]
+[ext_resource type="Texture2D" uid="uid://d25nagyvblxsl" path="res://src/Assets/Proto/7939.png" id="2_epc8x"]
+[ext_resource type="Script" path="res://src/Scripts/Overworld/Player/ChangeTexture.cs" id="3_qvxlw"]
+[ext_resource type="Script" path="res://src/Scripts/Overworld/Player/TurnComponent.cs" id="4_5mlk4"]
+[ext_resource type="Resource" uid="uid://cdpiwi7ss1uns" path="res://src/Resources/Turn_Data/Player/new_resource.tres" id="5_5bp42"]
+[ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="6_jiahb"]
+[ext_resource type="Script" path="res://src/Scripts/Battle/General/StartBattle.cs" id="7_op3mf"]
+[ext_resource type="Resource" uid="uid://b7cumnaofwp1i" path="res://src/Resources/Turn_Data/Enemy/Bob.tres" id="8_kapw1"]
+[ext_resource type="Texture2D" uid="uid://cgtr3mm5v33hs" path="res://src/Assets/Proto/New Piskel(4).png" id="9_vgqr3"]
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47:src/Scenes/game.tscn
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvo1y"]
 radius = 101.995
 height = 1055.35
 
+<<<<<<< HEAD:game.tscn
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3r40"]
+size = Vector2(1205, 1200)
+
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47:src/Scenes/game.tscn
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2u187"]
-texture = ExtResource("9_m3n78")
+texture = ExtResource("9_vgqr3")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -109,13 +129,13 @@ size = Vector2(1205, 1200)
 position = Vector2(410, 491)
 scale = Vector2(0.33335, 0.140237)
 safe_margin = 0.001
-script = ExtResource("1_a1ika")
+script = ExtResource("1_kdjgv")
 
 [node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
 unique_name_in_owner = true
 scale = Vector2(0.749962, 1.78269)
-texture = ExtResource("2_wd56v")
-script = ExtResource("3_lgbaq")
+texture = ExtResource("2_epc8x")
+script = ExtResource("3_qvxlw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_tvo1y")
@@ -125,9 +145,25 @@ position = Vector2(0, -7.13079)
 offset = Vector2(0, -150.49)
 
 [node name="TurnComponent" type="Node" parent="CharacterBody2D"]
-script = ExtResource("3_81g2q")
-turnData = ExtResource("4_4msog")
+script = ExtResource("4_5mlk4")
+turnData = ExtResource("5_5bp42")
 
+<<<<<<< HEAD:game.tscn
+=======
+[node name="BobT7fr" type="Sprite2D" parent="."]
+position = Vector2(802, 439)
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("6_jiahb")
+
+[node name="Area2D" type="Area2D" parent="BobT7fr"]
+script = ExtResource("7_op3mf")
+EnemyTurns = Array[Object]([ExtResource("8_kapw1"), ExtResource("8_kapw1")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BobT7fr/Area2D"]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_a3r40")
+
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47:src/Scenes/game.tscn
 [node name="Overworld" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0

@@ -14,7 +14,26 @@ res://PlayerMove.cs
 res://StartBattle.cs
 res://TurnComponent.cs
 res://TurnData.cs
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 res://PathLogic.cs
 =======
 >>>>>>> Stashed changes
+=======
+res://src/Scenes/game.tscn
+res://src/Scripts/Battle/Enemy/EnemyData.cs
+res://src/Scripts/Battle/General/BattleScreen.cs
+res://src/Scripts/Battle/General/Item.cs
+res://src/Scripts/Battle/General/StartBattle.cs
+res://src/Scripts/Battle/General/TurnData.cs
+res://src/Scripts/Battle/Skills/Command.cs
+res://src/Scripts/Global/Global.cs
+res://src/Scripts/Overworld/Player/ChangeTexture.cs
+res://src/Scripts/Overworld/Player/PlayerMove.cs
+res://src/Scripts/Overworld/Player/TurnComponent.cs
+res://src/Resources/Turn_Data/new_resource.tres
+res://addons/MetroidvaniaSystem/Scripts/RoomDrawer.gd
+res://src/Resources/Turn_Data/Enemy/Bob.tres
+res://src/Scenes/Template/battle.tscn
+res://src/Scripts/Battle/General/Element.cs
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47

@@ -10,8 +10,7 @@ public partial class TurnData : Resource
 	public enum type{
 		PLAYER, ENEMY
 	}
-	[Export]
-	public type TurnType;
+	public type TurnType = type.PLAYER;
 	[Export] public int Speed;
 	[Export] public int Attack;
 	[Export] public int Defense;

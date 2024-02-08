@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rgv3fpfrxk0q"
-path="res://.godot/imported/Bob_T7FR.webp-48f7f9d7fe7afc2d61d57a51c0100e16.ctex"
+uid="uid://d25nagyvblxsl"
+path="res://.godot/imported/7939.png-8eff6842dfa9717e5188af0bc23eb21f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bob_T7FR.webp"
-dest_files=["res://.godot/imported/Bob_T7FR.webp-48f7f9d7fe7afc2d61d57a51c0100e16.ctex"]
+source_file="res://src/Assets/Proto/7939.png"
+dest_files=["res://.godot/imported/7939.png-8eff6842dfa9717e5188af0bc23eb21f.ctex"]
 
 [params]
 

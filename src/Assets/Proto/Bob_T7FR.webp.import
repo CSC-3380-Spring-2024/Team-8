@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b80igxvurkdn"
-path="res://.godot/imported/deepfried_1706745825604.jpg-5218a7fe820e4cc157cc0a2a4d0106e9.ctex"
+uid="uid://rgv3fpfrxk0q"
+path="res://.godot/imported/Bob_T7FR.webp-398abb34f264e529e3c98fed8bc52718.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://deepfried_1706745825604.jpg"
-dest_files=["res://.godot/imported/deepfried_1706745825604.jpg-5218a7fe820e4cc157cc0a2a4d0106e9.ctex"]
+source_file="res://src/Assets/Proto/Bob_T7FR.webp"
+dest_files=["res://.godot/imported/Bob_T7FR.webp-398abb34f264e529e3c98fed8bc52718.ctex"]
 
 [params]
 
