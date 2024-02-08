@@ -4,12 +4,6 @@
 
 [resource]
 script = ExtResource("1_0vyt1")
-elements = [Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
-, Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
-, Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
-, Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
-, Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://src/Scripts/Battle/General/Element.cs"),"currentElement":0,"effect":0)
-]
 fighterName = "Bob"
 Level = 1
 Speed = 0

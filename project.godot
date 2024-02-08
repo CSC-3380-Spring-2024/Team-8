@@ -14,7 +14,7 @@ metroidvania_system/settings_file="res://src/Resources/Addons/MetSysSettings.tre
 
 [application]
 
-config/name="Unit V.I.X.E.N"
+config/name="Unit V.U.L.P.E.S"
 run/main_scene="res://src/Scenes/game.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 run/max_fps=60
