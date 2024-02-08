@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddsidyx88hmcx"]
+[gd_scene load_steps=16 format=3 uid="uid://ddsidyx88hmcx"]
 
 [ext_resource type="Script" path="res://PlayerMove.cs" id="1_a1ika"]
 [ext_resource type="Texture2D" uid="uid://d25nagyvblxsl" path="res://7939.png" id="2_wd56v"]
 [ext_resource type="Script" path="res://TurnComponent.cs" id="3_81g2q"]
+[ext_resource type="Script" path="res://ChangeTexture.cs" id="3_lgbaq"]
 [ext_resource type="Resource" uid="uid://cdpiwi7ss1uns" path="res://new_resource.tres" id="4_4msog"]
 [ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://Bob_T7FR.webp" id="4_778hf"]
 [ext_resource type="Script" path="res://StartBattle.cs" id="5_jjrqu"]
@@ -104,8 +105,10 @@ safe_margin = 0.001
 script = ExtResource("1_a1ika")
 
 [node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
+unique_name_in_owner = true
 scale = Vector2(0.749962, 1.78269)
 texture = ExtResource("2_wd56v")
+script = ExtResource("3_lgbaq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_tvo1y")
