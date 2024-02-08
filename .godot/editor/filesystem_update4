@@ -15,11 +15,14 @@ res://StartBattle.cs
 res://TurnComponent.cs
 res://TurnData.cs
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 res://PathLogic.cs
 =======
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47
 res://src/Scenes/game.tscn
 res://src/Scripts/Battle/Enemy/EnemyData.cs
 res://src/Scripts/Battle/General/BattleScreen.cs
@@ -36,4 +39,7 @@ res://addons/MetroidvaniaSystem/Scripts/RoomDrawer.gd
 res://src/Resources/Turn_Data/Enemy/Bob.tres
 res://src/Scenes/Template/battle.tscn
 res://src/Scripts/Battle/General/Element.cs
+<<<<<<< HEAD
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47
+=======
 >>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47

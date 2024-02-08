@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:game.tscn
 [gd_scene load_steps=18 format=3 uid="uid://ddsidyx88hmcx"]
 
@@ -14,6 +15,10 @@
 =======
 [gd_scene load_steps=14 format=3 uid="uid://ddsidyx88hmcx"]
 
+=======
+[gd_scene load_steps=14 format=3 uid="uid://ddsidyx88hmcx"]
+
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/PlayerMove.cs" id="1_kdjgv"]
 [ext_resource type="Texture2D" uid="uid://d25nagyvblxsl" path="res://src/Assets/Proto/7939.png" id="2_epc8x"]
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/ChangeTexture.cs" id="3_qvxlw"]
@@ -23,14 +28,20 @@
 [ext_resource type="Script" path="res://src/Scripts/Battle/General/StartBattle.cs" id="7_op3mf"]
 [ext_resource type="Resource" uid="uid://b7cumnaofwp1i" path="res://src/Resources/Turn_Data/Enemy/Bob.tres" id="8_kapw1"]
 [ext_resource type="Texture2D" uid="uid://cgtr3mm5v33hs" path="res://src/Assets/Proto/New Piskel(4).png" id="9_vgqr3"]
+<<<<<<< HEAD
 >>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47:src/Scenes/game.tscn
+=======
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvo1y"]
 radius = 101.995
 height = 1055.35
 
+<<<<<<< HEAD
 <<<<<<< HEAD:game.tscn
 =======
+=======
+>>>>>>> fc2e0967bbb2c130d614d94fdc2a563db2453b47
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3r40"]
 size = Vector2(1205, 1200)
 
