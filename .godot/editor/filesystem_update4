@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 res://battle.tscn
 res://game.tscn
+=======
+res://game.tscn
+res://battle.tscn
+>>>>>>> Stashed changes
 res://BattleScreen.cs
 res://ChangeTexture.cs
 res://Command.cs
@@ -9,4 +14,7 @@ res://PlayerMove.cs
 res://StartBattle.cs
 res://TurnComponent.cs
 res://TurnData.cs
+<<<<<<< Updated upstream
 res://PathLogic.cs
+=======
+>>>>>>> Stashed changes

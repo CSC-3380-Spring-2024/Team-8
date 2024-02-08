@@ -1,14 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< Updated upstream
 ::res://::1707405068
 7939.png::CompressedTexture2D::9117081836005281491::1707230078::1707230078::1::::<><>::
 battle.tscn::PackedScene::6847695980718730469::1707405030::0::1::::<><>::uid://ci5r77kkoj0i2::::res://Fonts/Early GameBoy.ttf<>res://BattleScreen.cs
 BattleScreen.cs::CSharpScript::-1::1707405030::0::1::::<>Control<>::
+=======
+::res://::1707404358
+7939.png::CompressedTexture2D::9117081836005281491::1707230078::1707230078::1::::<><>::
+battle.tscn::PackedScene::6847695980718730469::1707360446::0::1::::<><>::uid://ci5r77kkoj0i2::::res://Fonts/Early GameBoy.ttf<>res://BattleScreen.cs
+BattleScreen.cs::CSharpScript::-1::1707331657::0::1::::<>Control<>::
+>>>>>>> Stashed changes
 Bob_T7FR.webp::CompressedTexture2D::1206921953487970226::1707230078::1707230078::1::::<><>::
 ChangeTexture.cs::CSharpScript::-1::1707359023::0::1::::<>Sprite2D<>::
 Command.cs::CSharpScript::-1::1707230078::0::1::::<>Node<>::
 deepfried_1706745825604.jpg::CompressedTexture2D::139845872344558659::1707230079::1707230079::1::::<><>::
 game.tscn::PackedScene::7407479772524984883::1707360446::0::1::::<><>::res://PlayerMove.cs<>uid://d25nagyvblxsl::::res://7939.png<>res://TurnComponent.cs<>res://ChangeTexture.cs<>uid://cdpiwi7ss1uns::::res://new_resource.tres<>uid://rgv3fpfrxk0q::::res://Bob_T7FR.webp<>res://StartBattle.cs<>res://TurnData.cs<>uid://cgtr3mm5v33hs::::res://New Piskel(4).png
+<<<<<<< Updated upstream
 GBGrid.gdshader::Shader::-1::1707405030::0::1::::<><>::
+=======
+>>>>>>> Stashed changes
 Global.cs::CSharpScript::-1::1707230078::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::3844734774414503382::1707230079::1707230079::1::::<><>::
 Item.cs::CSharpScript::-1::1707230078::0::1::::Item<>Node<>::
@@ -21,7 +31,11 @@ New Piskel(7).png::CompressedTexture2D::8212055930460089606::1707405030::1707405
 new_resource.tres::Resource/TurnData::5014899058482714956::1707230079::0::1::::<><>::res://TurnData.cs
 PlayerMove.cs::CSharpScript::-1::1707332028::0::1::::<>CharacterBody2D<>::
 README.md::TextFile::-1::1707357909::0::1::::<><>::
+<<<<<<< Updated upstream
 StartBattle.cs::CSharpScript::-1::1707405030::0::1::::<>Area2D<>::
+=======
+StartBattle.cs::CSharpScript::-1::1707230078::0::1::::<>Area2D<>::
+>>>>>>> Stashed changes
 TurnComponent.cs::CSharpScript::-1::1707230078::0::1::::<>Node<>::
 TurnData.cs::CSharpScript::-1::1707230078::0::1::::TurnData<>Resource<>::
 ::res://addons/::1707230078
