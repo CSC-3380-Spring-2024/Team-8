@@ -21,15 +21,15 @@ public partial class PlayerMove : CharacterBody2D
 	float JumpGravity;
 	float FallGravity;
 
-    public override void _Ready()
-    {
-        JumpVelocity = (2.0f * JumpHeight) / timeToPeak;
+	public override void _Ready()
+	{
+		JumpVelocity = (2.0f * JumpHeight) / timeToPeak;
 		JumpGravity = (-2.0f * JumpHeight) / (timeToPeak * timeToPeak);
 		FallGravity = (-2.0f * JumpHeight) / (timeToFall * timeToFall);
-    }
+	}
 
-    // Get the gravity from the project settings to be synced with RigidBody nodes.
-    public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+	// Get the gravity from the project settings to be synced with RigidBody nodes.
+	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
 
 	float get_gravity()
