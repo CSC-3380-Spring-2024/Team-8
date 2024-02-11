@@ -9,7 +9,8 @@ public partial class BattleScreen : Control
 	Node Dialogue;
 
 	TurnData[] enemyData;
-
+	ActionManager actionManager;
+	Button firstButton;
 	public void New(TurnData[] EnemyData)
 	{
 		enemyData = EnemyData;
@@ -46,11 +47,24 @@ public partial class BattleScreen : Control
 		GD.Print(d_label);
 		GD.Print(menuDialogue());
 		d_label.Text = menuDialogue();
-		
+		actionManager = (ActionManager)GetNode("Action Manager");
+		firstButton = (Button)Dialogue.GetNode("Buttons").GetChild(0);
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+
+    public override void _Input(InputEvent @event)
+    {
+        base._Input(@event);
+		if(Input.IsActionJustPressed("ui_accept") & state == menuState.START)
+		{
+			state = menuState.SELECT;
+			Label d_label = (Label)Dialogue.GetNode("Label");
+			d_label.Text = menuDialogue();
+			firstButton.GrabFocus();
+		}
+    }
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 	}
 
@@ -70,6 +84,7 @@ public partial class BattleScreen : Control
 			Label SP = (Label)partyLabels[i].GetChild(2);
 			SP.Show();
 			SP.Text = ("SP: " + Global.partyTurns[i].currentMP + "/" + Global.partyTurns[i].maxMP);
+			
 		}
 	}
 

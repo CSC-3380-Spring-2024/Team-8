@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707428369
+::res://::1707454302
 MapData.txt::TextFile::-1::1707428368::0::1::::<><>::
 README.md::TextFile::-1::1707363154::0::1::::<><>::
 ::res://addons/::1706891885
@@ -27,7 +27,7 @@ CollectibleFoundItem.tscn::PackedScene::6324390053996725631::1706891885::0::1:::
 RoomInstance.tscn::PackedScene::3663775679193023938::1706891885::0::1::::<><>::res://addons/MetroidvaniaSystem/Scripts/RoomInstance.gd
 RoomPreview.tscn::PackedScene::4068944844568016361::1706891886::0::1::::<><>::uid://dfyoc5jqnnpf5::::res://addons/MetroidvaniaSystem/Database/DatabaseTheme.tres
 Singleton.tscn::PackedScene::6581724622763281895::1706891886::0::1::::<><>::res://addons/MetroidvaniaSystem/Scripts/MetroidvaniaSystem.gd
-::res://addons/MetroidvaniaSystem/Scripts/::1707413911
+::res://addons/MetroidvaniaSystem/Scripts/::1707451919
 CollectibleElement.gd::GDScript::-1::1706891886::0::1::::<>PanelContainer<>::
 CollectibleFoundItem.gd::GDScript::-1::1706891886::0::1::::<>PanelContainer<>::
 CustomElementManager.gd::GDScript::-1::1706891886::0::1::::<>RefCounted<>::
@@ -38,7 +38,7 @@ MapTheme.gd::GDScript::-1::1706891886::0::1::::MapTheme<>Resource<>::
 MapView.gd::GDScript::-1::1706891886::0::1::::<>Control<>::
 MetroidvaniaSystem.gd::GDScript::-1::1706891886::0::1::::MetroidvaniaSystem<>Node<>::
 PlayerLocationInstance.gd::GDScript::-1::1706891886::0::1::::<>Node2D<>::
-RoomDrawer.gd::GDScript::-1::1707413911::0::1::::<>RefCounted<>::
+RoomDrawer.gd::GDScript::-1::1707451919::0::1::::<>RefCounted<>::
 RoomInstance.gd::GDScript::-1::1706891886::0::1::::<>Node2D<>::
 SaveData.gd::GDScript::-1::1706891886::0::1::::<>RefCounted<>::
 Settings.gd::GDScript::-1::1706891886::0::1::::<>Resource<>::
@@ -201,38 +201,39 @@ New Piskel(7).png::CompressedTexture2D::8212055930460089606::1707370427::1707408
 ::res://src/Fonts/::1707408739
 Early GameBoy.ttf::FontFile::5397374480062935671::1388882366::1707408738::1::::<><>::
 Early-GameBoy.png::FontFile::1918766162074409232::1707099351::1707408739::1::::<><>::
-::res://src/Resources/::1707409198
+::res://src/Resources/::1707429083
 ::res://src/Resources/Addons/::1707409205
 MapData.txt::TextFile::-1::1707409175::0::1::::<><>::
 MetSysSettings.tres::Resource::4149561076656607633::1706891938::0::1::::<><>::res://addons/MetroidvaniaSystem/Scripts/Settings.gd<>uid://bt6s3nd8xo6b::::res://addons/MetroidvaniaSystem/Themes/Exquisite/Theme.tres
+::res://src/Resources/Armor/::1707429083
 ::res://src/Resources/Turn_Data/::1707409416
-::res://src/Resources/Turn_Data/Enemy/::1707428368
-Bob.tres::Resource/EnemyData::4637828888447657336::1707428368::0::1::::<><>::res://src/Scripts/Battle/Enemy/EnemyData.cs<>res://src/Scripts/Battle/General/Resource Scripts/Element.cs
-::res://src/Resources/Turn_Data/Player/::1707427876
-new_resource.tres::Resource/TurnData::5014899058482714956::1707427876::0::1::::<><>::res://src/Scripts/Battle/General/Resource Scripts/TurnData.cs
-::res://src/Scenes/::1707428368
-game.tscn::PackedScene::7639466410535089072::1707428368::0::1::::<><>::res://src/Scripts/Overworld/Player/PlayerMove.cs<>uid://d25nagyvblxsl::::res://src/Assets/Proto/7939.png<>res://src/Scripts/Overworld/Player/ChangeTexture.cs<>res://src/Scripts/Overworld/Player/TurnComponent.cs<>uid://cdpiwi7ss1uns::::res://src/Resources/Turn_Data/Player/new_resource.tres<>uid://rgv3fpfrxk0q::::res://src/Assets/Proto/Bob_T7FR.webp<>res://src/Scripts/Battle/General/StartBattle.cs<>uid://b7cumnaofwp1i::::res://src/Resources/Turn_Data/Enemy/Bob.tres<>uid://cgtr3mm5v33hs::::res://src/Assets/Proto/New Piskel(4).png
+::res://src/Resources/Turn_Data/Enemy/::1707454301
+Bob.tres::Resource/EnemyData::4637828888447657336::1707454301::0::1::::<><>::res://src/Scripts/Battle/Enemy/EnemyData.cs<>res://src/Scripts/Battle/General/Resource Scripts/Element.cs<>uid://rgv3fpfrxk0q::::res://src/Assets/Proto/Bob_T7FR.webp<>uid://ch4ijs6f36848::::res://src/Scenes/Template/enemy_template.tscn
+::res://src/Resources/Turn_Data/Player/::1707431046
+new_resource.tres::Resource/playerData::5014899058482714956::1707431046::0::1::::<><>::res://src/Scripts/Battle/Player/playerData.cs
+::res://src/Scenes/::1707454302
+game.tscn::PackedScene::7639466410535089072::1707454302::0::1::::<><>::res://src/Scripts/Overworld/Player/PlayerMove.cs<>uid://d25nagyvblxsl::::res://src/Assets/Proto/7939.png<>res://src/Scripts/Overworld/Player/ChangeTexture.cs<>res://src/Scripts/Overworld/Player/TurnComponent.cs<>uid://cdpiwi7ss1uns::::res://src/Resources/Turn_Data/Player/new_resource.tres<>uid://rgv3fpfrxk0q::::res://src/Assets/Proto/Bob_T7FR.webp<>res://src/Scripts/Battle/General/StartBattle.cs<>uid://b7cumnaofwp1i::::res://src/Resources/Turn_Data/Enemy/Bob.tres<>uid://cgtr3mm5v33hs::::res://src/Assets/Proto/New Piskel(4).png
 ::res://src/Scenes/Level/::1707409048
-::res://src/Scenes/Template/::1707424781
-battle.tscn::PackedScene::6847695980718730469::1707416368::0::1::::<><>::res://src/Scripts/Battle/General/BattleScreen.cs<>uid://ci5r77kkoj0i2::::res://src/Fonts/Early GameBoy.ttf
-enemy_template.tscn::PackedScene::5324533029382529687::1707424781::0::1::::<><>::uid://rgv3fpfrxk0q::::res://src/Assets/Proto/Bob_T7FR.webp<>res://src/Scripts/Battle/Enemy/enemy_template.cs
+::res://src/Scenes/Template/::1707454302
+battle.tscn::PackedScene::6847695980718730469::1707454302::0::1::::<><>::res://src/Scripts/Battle/General/BattleScreen.cs<>uid://ci5r77kkoj0i2::::res://src/Fonts/Early GameBoy.ttf
+enemy_template.tscn::PackedScene::5324533029382529687::1707454302::0::1::::<><>::uid://rgv3fpfrxk0q::::res://src/Assets/Proto/Bob_T7FR.webp<>res://src/Scripts/Battle/Enemy/enemy_template.cs
 ::res://src/Scripts/::1707408647
 ::res://src/Scripts/Battle/::1707424833
 ::res://src/Scripts/Battle/Enemy/::1707421238
-EnemyData.cs::CSharpScript::-1::1707423506::0::1::::EnemyData<>TurnData<>::
-enemy_template.cs::CSharpScript::-1::1707422562::0::1::::<><>::
+EnemyData.cs::CSharpScript::-1::1707454254::0::1::::EnemyData<>TurnData<>::
+enemy_template.cs::CSharpScript::-1::1707453502::0::1::::<>TextureRect<>::
 ::res://src/Scripts/Battle/General/::1707428368
 BattleScreen.cs::CSharpScript::-1::1707370942::0::1::::<>Control<>::
-StartBattle.cs::CSharpScript::-1::1707418014::0::1::::<>Area2D<>::
+StartBattle.cs::CSharpScript::-1::1707454255::0::1::::<>Area2D<>::
 ::res://src/Scripts/Battle/General/Resource Scripts/::1707428368
 Element.cs::CSharpScript::-1::1707414080::0::1::::<>Resource<>::
-Item.cs::CSharpScript::-1::1706891784::0::1::::<><>::
+Item.cs::CSharpScript::-1::1706891784::0::1::::Item<>Node<>::
 TurnData.cs::CSharpScript::-1::1707424792::0::1::::TurnData<>Resource<>::
 ::res://src/Scripts/Battle/Player/::1707427973
-Armor.cs::CSharpScript::-1::1707429059::0::1::::<><>::
-playerData.cs::CSharpScript::-1::1707428777::0::1::::<><>::
+Armor.cs::CSharpScript::-1::1707429059::0::1::::Armor<>Resource<>::
+playerData.cs::CSharpScript::-1::1707429295::0::1::::playerData<>TurnData<>::
 ::res://src/Scripts/Battle/Skills/::1707408584
-Command.cs::CSharpScript::-1::1707422748::0::1::::<>Node<>::
+Command.cs::CSharpScript::-1::1707422748::0::1::::<>Resource<>::
 ::res://src/Scripts/Global/::1707408652
 Global.cs::CSharpScript::-1::1707072859::0::1::::<>Node<>::
 ::res://src/Scripts/Overworld/::1707422001

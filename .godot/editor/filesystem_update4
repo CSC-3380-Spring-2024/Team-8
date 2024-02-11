@@ -1,22 +1,21 @@
 res://src/Scenes/game.tscn
+res://addons/MetroidvaniaSystem/Scripts/RoomDrawer.gd
 res://src/Resources/Turn_Data/Enemy/Bob.tres
-res://PathLogic.cs
-res://src/Scripts/Battle/Enemy/EnemyData.cs
-res://src/Scripts/Battle/General/BattleScreen.cs
-res://src/Scripts/Battle/General/Element.cs
-res://src/Scripts/Battle/General/Item.cs
-res://src/Scripts/Battle/General/StartBattle.cs
-res://src/Scripts/Battle/General/TurnData.cs
-res://src/Scripts/Battle/Skills/Command.cs
-res://src/Scripts/Global/Global.cs
-res://src/Scripts/Overworld/Player/ChangeTexture.cs
-res://src/Scripts/Overworld/Player/PlayerMove.cs
-res://src/Scripts/Overworld/Player/TurnComponent.cs
 res://src/Scenes/Template/enemy_template.tscn
+res://src/Scripts/Battle/Enemy/EnemyData.cs
 res://src/Scripts/Battle/Enemy/enemy_template.cs
+res://src/Scripts/Battle/General/BattleScreen.cs
 res://src/Scripts/Battle/General/Resource Scripts/Element.cs
 res://src/Scripts/Battle/General/Resource Scripts/Item.cs
 res://src/Scripts/Battle/General/Resource Scripts/TurnData.cs
+res://src/Scripts/Battle/General/StartBattle.cs
 res://src/Scripts/Battle/Player/Armor.cs
 res://src/Scripts/Battle/Player/playerData.cs
+res://src/Scripts/Battle/Skills/Command.cs
+res://src/Scripts/Global/Global.cs
 res://src/Scripts/Overworld/Enemies/PathLogic.cs
+res://src/Scripts/Overworld/Player/ChangeTexture.cs
+res://src/Scripts/Overworld/Player/PlayerMove.cs
+res://src/Scripts/Overworld/Player/TurnComponent.cs
+res://src/Scenes/Template/battle.tscn
+res://src/Scenes/Template/ActionManager.cs

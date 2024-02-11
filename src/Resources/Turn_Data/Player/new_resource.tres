@@ -1,19 +1,20 @@
-[gd_resource type="Resource" script_class="TurnData" load_steps=2 format=3 uid="uid://cdpiwi7ss1uns"]
+[gd_resource type="Resource" script_class="playerData" load_steps=2 format=3 uid="uid://cdpiwi7ss1uns"]
 
-[ext_resource type="Script" path="res://src/Scripts/Battle/General/Resource Scripts/TurnData.cs" id="1_f7y3p"]
+[ext_resource type="Script" path="res://src/Scripts/Battle/Player/playerData.cs" id="1_1je3x"]
 
 [resource]
-script = ExtResource("1_f7y3p")
+script = ExtResource("1_1je3x")
 fighterName = "Vulpes"
 Level = 1
-Speed = 5
-Attack = 9001
-Defense = 1
-maxHP = 9999
-currentHP = 9999
-maxMP = 2
-currentMP = 2
-maxCommands = 12
+Speed = 0
+Attack = 0
+PhysDefense = 0
+MagicDefense = 0
+maxHP = 0
+currentHP = 0
+maxMP = 0
+currentMP = 0
+maxCommands = 0
 commands = null
 inventorySize = 12
 inventory = null

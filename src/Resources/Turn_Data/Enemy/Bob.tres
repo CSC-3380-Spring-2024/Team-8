@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=8 format=3 uid="uid://b7cumnaofwp1i"]
+[gd_resource type="Resource" script_class="EnemyData" load_steps=10 format=3 uid="uid://b7cumnaofwp1i"]
 
 [ext_resource type="Script" path="res://src/Scripts/Battle/Enemy/EnemyData.cs" id="1_0vyt1"]
 [ext_resource type="Script" path="res://src/Scripts/Battle/General/Resource Scripts/Element.cs" id="1_1hn45"]
+[ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="3_4uh3b"]
+[ext_resource type="PackedScene" uid="uid://ch4ijs6f36848" path="res://src/Scenes/Template/enemy_template.tscn" id="4_lfy5o"]
 
 [sub_resource type="Resource" id="Resource_s8sm4"]
 script = ExtResource("1_1hn45")
@@ -25,12 +27,16 @@ effect = 0
 
 [resource]
 script = ExtResource("1_0vyt1")
+template = ExtResource("4_lfy5o")
+sprite = ExtResource("3_4uh3b")
+pass = false
 elements = [SubResource("Resource_s8sm4"), SubResource("Resource_hliak"), SubResource("Resource_xjypg"), SubResource("Resource_rmof6"), SubResource("Resource_sbjvt")]
 fighterName = "Bob"
 Level = 1
 Speed = 0
 Attack = 0
-Defense = 0
+PhysDefense = 0
+MagicDefense = 0
 maxHP = 0
 currentHP = 0
 maxMP = 0

@@ -12,9 +12,10 @@ public partial class enemy_template : TextureRect
 	public override void _Ready()
 	{
 	}
-	void New(EnemyData Data)
+	public void New(EnemyData Data)
 	{
 		data = Data;
+		Texture = data.sprite;
 		currentHealth = data.currentHP;
 		currentSP = data.currentMP;
 		skills = data.commands;
