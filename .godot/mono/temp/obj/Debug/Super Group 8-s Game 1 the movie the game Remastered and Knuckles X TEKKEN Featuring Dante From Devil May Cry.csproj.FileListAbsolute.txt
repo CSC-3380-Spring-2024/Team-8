@@ -9,7 +9,6 @@ C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 
 C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.AssemblyInfoInputs.cache
 C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.AssemblyInfo.cs
 C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj.CoreCompileInputs.cache
-C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.csproj.CopyComplete
 C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.dll
 C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\refint\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.dll
 C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.pdb
@@ -33,3 +32,5 @@ C:\Users\blink\Team-8\.godot\mono\temp\obj\Debug\refint\Super Group 8-s Game 1 t
 C:\Users\blink\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.pdb
 C:\Users\blink\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.genruntimeconfig.cache
 C:\Users\blink\Team-8\.godot\mono\temp\obj\Debug\ref\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.dll
+C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featuring Dante From Devil May Cry.sourcelink.json
+C:\Users\trist\Documents\Team-8\.godot\mono\temp\obj\Debug\Super Gr.DFBC6F4A.Up2Date

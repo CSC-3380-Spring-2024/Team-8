@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/Scripts/Battle/General/BattleScreen.cs" id="1_bams4"]
 [ext_resource type="FontFile" uid="uid://ci5r77kkoj0i2" path="res://src/Fonts/Early GameBoy.ttf" id="2_d2omv"]
-[ext_resource type="Script" path="res://src/Scenes/Template/ActionManager.cs" id="3_oc3kh"]
+[ext_resource type="Script" path="res://src/Scripts/Battle/General/ActionManager.cs" id="3_oc3kh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

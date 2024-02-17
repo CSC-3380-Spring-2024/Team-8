@@ -30,10 +30,10 @@ public partial class PlayerMove : CharacterBody2D
 		JumpGravity = (-2.0f * JumpHeight) / (timeToPeak * timeToPeak);
 		FallGravity = (-2.0f * JumpHeight) / (timeToFall * timeToFall);
 		VariableJumpGravity = (JumpVelocity * JumpVelocity) / (2 * VariableJumpHeight);
+		FloorSnapLength = 0;
+		GD.Print(FloorSnapLength);
 	}
 
-	// Get the gravity from the project settings to be synced with RigidBody nodes.
-	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
 
 	float get_gravity()
