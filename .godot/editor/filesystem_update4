@@ -1,13 +1,10 @@
-res://src/Scenes/Level/Areas/Test/Test_1.tscn
-res://addons/MetroidvaniaSystem/Scripts/RoomDrawer.gd
-res://src/Resources/Turn_Data/Enemy/Bob.tres
-res://src/Scenes/Template/battle.tscn
 res://src/Scenes/game.tscn
-res://src/Resources/Addons/MetSysSettings.tres
-res://src/Scripts/MetSys/MetSysBridge.gd
+res://src/Resources/Turn_Data/Enemy/Bob.tres
 res://src/Scenes/Template/enemy_template.tscn
+res://src/Scenes/Template/battle.tscn
 res://src/Scenes/Level/Areas/Test/Test_2.tscn
 res://src/Scenes/Level/Test_Classic.tscn
+res://src/Scenes/Level/Areas/Test/Test_1.tscn
 res://src/Scenes/Level/Areas/Test/Test_Ind_1.tscn
 res://src/Scripts/Battle/Enemy/EnemyData.cs
 res://src/Scripts/Battle/Enemy/enemy_template.cs
@@ -21,7 +18,7 @@ res://src/Scripts/Battle/Player/Armor.cs
 res://src/Scripts/Battle/Player/playerData.cs
 res://src/Scripts/Battle/Skills/Command.cs
 res://src/Scripts/Global/Global.cs
-res://src/Scripts/MetSys/MetSysBridgeInterface.cs
+res://src/Scripts/Misc/game.cs
 res://src/Scripts/Overworld/Enemies/PathLogic.cs
 res://src/Scripts/Overworld/Player/ChangeTexture.cs
 res://src/Scripts/Overworld/Player/PlayerMove.cs

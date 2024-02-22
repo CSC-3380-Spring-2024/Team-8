@@ -38,7 +38,6 @@ func load_room(path: String):
 		map = null
 	
 	map = load(path).instantiate()
-	add_child(map)
 	
 	MetSys.current_layer = MetSys.get_current_room_instance().get_layer()
 	room_loaded.emit()

@@ -15,7 +15,7 @@ public static class MetSysBridgeInterface
     {
         bridge.Call("adjustCamera");
     }
-    public static void loadRoom(String path)
+    public static void loadRoom(String path, Node parent)
     {
         bridge.Call("loadRoom", path);
     }
@@ -26,6 +26,10 @@ public static class MetSysBridgeInterface
     public static void initRoom()
     {
         bridge.Call("initRoom");
+    }
+    public static void resetState()
+    {
+        bridge.Call("resetState");
     }
 
 }
