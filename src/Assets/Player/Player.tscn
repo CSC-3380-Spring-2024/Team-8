@@ -1,18 +1,18 @@
 [gd_scene load_steps=7 format=3 uid="uid://2124jypa8y06"]
 
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/PlayerMove.cs" id="1_gwfpd"]
-[ext_resource type="Texture2D" uid="uid://d25nagyvblxsl" path="res://src/Assets/Proto/7939.png" id="2_x0h33"]
+[ext_resource type="Texture2D" uid="uid://uo1p7e0cjlpg" path="res://src/Assets/Proto/sprite1.png" id="2_8qm3c"]
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/ChangeTexture.cs" id="3_th8nb"]
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/TurnComponent.cs" id="4_lmaxm"]
 [ext_resource type="Resource" uid="uid://cdpiwi7ss1uns" path="res://src/Resources/Turn_Data/Player/new_resource.tres" id="5_rorgp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvo1y"]
 radius = 101.995
-height = 1055.35
+height = 841.27
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(410, 491)
-scale = Vector2(0.33335, 0.140237)
+scale = Vector2(1.5, 0.63)
 floor_stop_on_slope = false
 floor_constant_speed = true
 safe_margin = 0.001
@@ -21,10 +21,11 @@ script = ExtResource("1_gwfpd")
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(0.749962, 1.78269)
-texture = ExtResource("2_x0h33")
+texture = ExtResource("2_8qm3c")
 script = ExtResource("3_th8nb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.3, 0.3)
 shape = SubResource("CapsuleShape2D_tvo1y")
 
 [node name="TurnComponent" type="Node" parent="."]
@@ -32,4 +33,3 @@ script = ExtResource("4_lmaxm")
 turnData = ExtResource("5_rorgp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(14.9993, -1240.76)

@@ -6,6 +6,7 @@ res://src/Scenes/Level/Areas/Test/Test_2.tscn
 res://src/Scenes/Level/Test_Classic.tscn
 res://src/Scenes/Level/Areas/Test/Test_1.tscn
 res://src/Scenes/Level/Areas/Test/Test_Ind_1.tscn
+res://src/Assets/Player/Player.tscn
 res://src/Scripts/Battle/Enemy/EnemyData.cs
 res://src/Scripts/Battle/Enemy/enemy_template.cs
 res://src/Scripts/Battle/General/ActionManager.cs
