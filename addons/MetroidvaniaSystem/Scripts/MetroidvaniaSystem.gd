@@ -75,12 +75,12 @@ func _enter_tree() -> void:
 		settings = load(settings_path)
 	else:
 		settings = MetSysSettings.new()
+		await get_tree().create_timer(1).timeout
 		settings.theme = load("res://addons/MetroidvaniaSystem/Themes/Exquisite/Theme.tres")
 		ResourceSaver.save(settings, settings_path)
 	
 	settings.theme_changed.connect(_update_theme)
 	_update_theme()
-	
 	map_data = MapData.new()
 	map_data.load_data()
 
@@ -378,3 +378,4 @@ func _cleanup_meta():
 	for meta in _meta_list:
 		remove_meta(meta)
 	_meta_list.clear()
+	
