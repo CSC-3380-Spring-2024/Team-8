@@ -1,14 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://2124jypa8y06"]
+[gd_scene load_steps=8 format=3 uid="uid://2124jypa8y06"]
 
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/PlayerMove.cs" id="1_gwfpd"]
-[ext_resource type="Texture2D" uid="uid://cv7tnoxsmryfr" path="res://src/Assets/Proto/Backup.png" id="2_d3qm0"]
-[ext_resource type="Script" path="res://src/Scripts/Overworld/Player/ChangeTexture.cs" id="3_th8nb"]
+[ext_resource type="Texture2D" uid="uid://bqs1npxmjya5p" path="res://src/Assets/Proto/standing.png" id="2_b6akm"]
+[ext_resource type="Texture2D" uid="uid://c71f62y7rfhnd" path="res://src/Assets/Proto/walking.png" id="3_4s8he"]
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/TurnComponent.cs" id="4_lmaxm"]
 [ext_resource type="Resource" uid="uid://cdpiwi7ss1uns" path="res://src/Resources/Turn_Data/Player/new_resource.tres" id="5_rorgp"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_bml4b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b6akm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4s8he")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvo1y"]
 radius = 101.995
-height = 841.27
+height = 730.159
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(410, 491)
@@ -18,11 +32,12 @@ floor_constant_speed = true
 safe_margin = 0.001
 script = ExtResource("1_gwfpd")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-scale = Vector2(0.749962, 1.78269)
-texture = ExtResource("2_d3qm0")
-script = ExtResource("3_th8nb")
+position = Vector2(16.3333, -67.4603)
+scale = Vector2(5.36667, 13.4921)
+sprite_frames = SubResource("SpriteFrames_bml4b")
+frame_progress = 0.463178
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.3, 0.3)

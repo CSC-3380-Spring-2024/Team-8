@@ -3,6 +3,7 @@ using System;
 
 public partial class PlayerMove : CharacterBody2D
 {
+	private AnimatedSprite2D sprite;
 	[Export]
 	float Speed = 400.0f;
 
@@ -32,6 +33,7 @@ public partial class PlayerMove : CharacterBody2D
 		VariableJumpGravity = (JumpVelocity * JumpVelocity) / (2 * VariableJumpHeight);
 		FloorSnapLength = 0;
 		GD.Print(FloorSnapLength);
+		sprite = GetNode<AnimatedSprite2D>("%AnimatedSprite2D");
 	}
 
 
@@ -57,8 +59,20 @@ public partial class PlayerMove : CharacterBody2D
 		// Add the gravity.
 		if (!IsOnFloor())
 			velocity.Y += get_gravity() * (float)delta;
-		else
+		else {
+			if (velocity.X != 0) {
+				if (velocity.X < 0) {
+					sprite.FlipH = true;
+				} else {
+					sprite.FlipH = false;
+				}
+				sprite.Play("default");
+			}
+			else
+
+				sprite.Stop();
 			velocity.Y = 0;
+		}
 		// Handle Jump.
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
 			velocity.Y = JumpVelocity;
