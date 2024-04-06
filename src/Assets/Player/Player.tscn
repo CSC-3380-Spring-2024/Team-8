@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://2124jypa8y06"]
 
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/PlayerMove.cs" id="1_gwfpd"]
-[ext_resource type="Texture2D" uid="uid://uo1p7e0cjlpg" path="res://src/Assets/Proto/sprite1.png" id="2_8qm3c"]
+[ext_resource type="Texture2D" uid="uid://cv7tnoxsmryfr" path="res://src/Assets/Proto/Backup.png" id="2_d3qm0"]
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/ChangeTexture.cs" id="3_th8nb"]
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/TurnComponent.cs" id="4_lmaxm"]
 [ext_resource type="Resource" uid="uid://cdpiwi7ss1uns" path="res://src/Resources/Turn_Data/Player/new_resource.tres" id="5_rorgp"]
@@ -21,7 +21,7 @@ script = ExtResource("1_gwfpd")
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(0.749962, 1.78269)
-texture = ExtResource("2_8qm3c")
+texture = ExtResource("2_d3qm0")
 script = ExtResource("3_th8nb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
