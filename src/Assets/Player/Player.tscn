@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://2124jypa8y06"]
+[gd_scene load_steps=9 format=3 uid="uid://2124jypa8y06"]
 
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/PlayerMove.cs" id="1_gwfpd"]
+[ext_resource type="Texture2D" uid="uid://c8bic8n5kbgth" path="res://src/Assets/Proto/space background.png" id="2_4wrcu"]
 [ext_resource type="Texture2D" uid="uid://bqs1npxmjya5p" path="res://src/Assets/Proto/standing.png" id="2_b6akm"]
 [ext_resource type="Texture2D" uid="uid://c71f62y7rfhnd" path="res://src/Assets/Proto/walking.png" id="3_4s8he"]
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/TurnComponent.cs" id="4_lmaxm"]
@@ -32,6 +33,15 @@ floor_constant_speed = true
 safe_margin = 0.001
 script = ExtResource("1_gwfpd")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -382.0
+offset_top = -514.0
+offset_right = 385.0
+offset_bottom = 514.0
+texture = ExtResource("2_4wrcu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(16.3333, -67.4603)
@@ -46,5 +56,3 @@ shape = SubResource("CapsuleShape2D_tvo1y")
 [node name="TurnComponent" type="Node" parent="."]
 script = ExtResource("4_lmaxm")
 turnData = ExtResource("5_rorgp")
-
-[node name="Camera2D" type="Camera2D" parent="."]
