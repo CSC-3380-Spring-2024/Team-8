@@ -3,6 +3,9 @@ using System;
 
 public partial class Element : Resource
 {
+	public Element() {
+		currentElement = element.Physical;
+	}
 	public Element( element CurrentElement)
 	{
 		currentElement = CurrentElement;

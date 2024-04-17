@@ -75,7 +75,6 @@ func _enter_tree() -> void:
 		settings = load(settings_path)
 	else:
 		settings = MetSysSettings.new()
-		await get_tree().create_timer(1).timeout
 		settings.theme = load("res://addons/MetroidvaniaSystem/Themes/Exquisite/Theme.tres")
 		ResourceSaver.save(settings, settings_path)
 	

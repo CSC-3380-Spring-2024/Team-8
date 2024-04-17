@@ -76,6 +76,6 @@ public partial class StartBattle : Area2D
 	public void _on_body_entered(CharacterBody2D body)
 	{
 		startBattle();
+		Global.involvedInBattle = (TurnComponent)body.GetChild(4);
 	}
-
 }

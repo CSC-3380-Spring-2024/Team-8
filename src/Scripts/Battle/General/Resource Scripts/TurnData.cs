@@ -23,4 +23,8 @@ public partial class TurnData : Resource
 	[Export] public Command[] commands;
 	[Export] int inventorySize = 12;
 	[Export] public Item[] inventory;
+
+	public int getHP() {
+		return this.currentHP;
+	}
 }
