@@ -51,8 +51,8 @@ public partial class StartBattle : Area2D
 		
 	}
 
-    private TurnData[] sortTurns(TurnData[] unsortedTurns)
-    {
+	private TurnData[] sortTurns(TurnData[] unsortedTurns)
+	{
 		var arrLength = unsortedTurns.Length;
 		for(int i = 0; i < arrLength; i++)
 		{
@@ -71,8 +71,8 @@ public partial class StartBattle : Area2D
 			unsortedTurns[i] = unsortedTurns[smallest];
 			
 		}
-        return unsortedTurns;
-    }
+		return unsortedTurns;
+	}
 	public void _on_body_entered(CharacterBody2D body)
 	{
 		startBattle();
