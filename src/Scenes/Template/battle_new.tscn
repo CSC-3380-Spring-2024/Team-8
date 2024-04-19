@@ -1,0 +1,508 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1uvy8xbl6ife"]
+
+[ext_resource type="Texture2D" uid="uid://c8bic8n5kbgth" path="res://src/Assets/Proto/space background.png" id="1_g1c6r"]
+[ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="2_hf88f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oay2j"]
+content_margin_bottom = 18.0
+bg_color = Color(0.822296, 0.0495786, 0.0279334, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1uyb"]
+bg_color = Color(0.0582782, 0.772325, 0.0488465, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nj6k"]
+bg_color = Color(0, 0.52549, 0.929412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_itybu"]
+colors = PackedColorArray(0, 0.52549, 0.929412, 1, 0, 0.52549, 0.929412, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wo7hk"]
+gradient = SubResource("Gradient_itybu")
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.238
+anchor_top = 0.821
+anchor_right = 0.239
+anchor_bottom = 0.822
+offset_left = -274.176
+offset_top = -532.508
+offset_right = 876.672
+offset_bottom = 115.844
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g1c6r")
+
+[node name="EnemyContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.435185
+anchor_right = 0.5
+anchor_bottom = 0.435185
+offset_left = -127.5
+offset_top = -143.0
+offset_right = 127.5
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="EnemyContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_oay2j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1uyb")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="EnemyContainer/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyTexture" type="TextureRect" parent="EnemyContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_hf88f")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CharPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0208333
+anchor_top = 0.970679
+anchor_right = 0.0208333
+anchor_bottom = 0.970679
+offset_top = -97.0
+offset_right = 250.0
+offset_bottom = 3.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nj6k")
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="CharPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117647
+anchor_top = 0.226804
+anchor_right = 0.117647
+anchor_bottom = 0.226804
+offset_right = 59.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "VULPES"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpLevel" type="Label" parent="CharPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.670588
+anchor_top = 0.226804
+anchor_right = 0.670588
+anchor_bottom = 0.226804
+offset_left = 3.0
+offset_right = 62.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="CharPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57451
+anchor_top = 0.742268
+anchor_right = 0.57451
+anchor_bottom = 0.742268
+offset_left = -76.5
+offset_top = -19.0
+offset_right = 76.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_oay2j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1uyb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CharPanel/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharPanel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.264757
+anchor_top = 0.970679
+anchor_right = 0.264757
+anchor_bottom = 0.970679
+offset_top = -97.0
+offset_right = 250.0
+offset_bottom = 3.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nj6k")
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="CharPanel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117647
+anchor_top = 0.226804
+anchor_right = 0.117647
+anchor_bottom = 0.226804
+offset_right = 59.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "VULPES"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpLevel" type="Label" parent="CharPanel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.670588
+anchor_top = 0.226804
+anchor_right = 0.670588
+anchor_bottom = 0.226804
+offset_left = 3.0
+offset_right = 62.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="CharPanel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57451
+anchor_top = 0.742268
+anchor_right = 0.57451
+anchor_bottom = 0.742268
+offset_left = -76.5
+offset_top = -19.0
+offset_right = 76.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_oay2j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1uyb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CharPanel2/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharPanel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.509549
+anchor_top = 0.970679
+anchor_right = 0.509549
+anchor_bottom = 0.970679
+offset_top = -97.0
+offset_right = 250.0
+offset_bottom = 3.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nj6k")
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="CharPanel3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117647
+anchor_top = 0.226804
+anchor_right = 0.117647
+anchor_bottom = 0.226804
+offset_right = 59.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "VULPES"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpLevel" type="Label" parent="CharPanel3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.670588
+anchor_top = 0.226804
+anchor_right = 0.670588
+anchor_bottom = 0.226804
+offset_left = 3.0
+offset_right = 62.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="CharPanel3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57451
+anchor_top = 0.742268
+anchor_right = 0.57451
+anchor_bottom = 0.742268
+offset_left = -76.5
+offset_top = -19.0
+offset_right = 76.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_oay2j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1uyb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CharPanel3/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharPanel4" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.756076
+anchor_top = 0.970679
+anchor_right = 0.756076
+anchor_bottom = 0.970679
+offset_top = -97.0
+offset_right = 250.0
+offset_bottom = 3.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nj6k")
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="CharPanel4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117647
+anchor_top = 0.226804
+anchor_right = 0.117647
+anchor_bottom = 0.226804
+offset_right = 59.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "VULPES"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpLevel" type="Label" parent="CharPanel4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.670588
+anchor_top = 0.226804
+anchor_right = 0.670588
+anchor_bottom = 0.226804
+offset_left = 3.0
+offset_right = 62.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="CharPanel4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57451
+anchor_top = 0.742268
+anchor_right = 0.57451
+anchor_bottom = 0.742268
+offset_left = -76.5
+offset_top = -19.0
+offset_right = 76.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_oay2j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1uyb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CharPanel4/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = 0.129
+anchor_top = 0.898
+anchor_right = 0.129
+anchor_bottom = 0.898
+offset_left = -124.608
+offset_top = -49.9041
+offset_right = 125.392
+offset_bottom = 50.0959
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -50.0
+offset_right = 125.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_wo7hk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/NinePatchRect"]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 100.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/Control/NinePatchRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "ATTACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Name3" type="Label" parent="CanvasLayer/Control/NinePatchRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "DEFEND"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/Control/NinePatchRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "INVENTORY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Name3" type="Label" parent="CanvasLayer/Control/NinePatchRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "FLEE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
