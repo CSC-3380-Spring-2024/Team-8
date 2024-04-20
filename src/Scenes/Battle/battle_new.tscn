@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://yuothxgb8p5r"]
+[gd_scene load_steps=7 format=3 uid="uid://bg88x7t5bh43e"]
 
 [ext_resource type="Script" path="res://src/Scripts/Battle/General/battle_new.cs" id="1_f4ta2"]
 [ext_resource type="Texture2D" uid="uid://c8bic8n5kbgth" path="res://src/Assets/Proto/space background.png" id="2_3flmd"]

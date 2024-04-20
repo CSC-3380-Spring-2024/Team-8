@@ -20,7 +20,7 @@ size = Vector2(84, 83)
 script = ExtResource("1_7dmiw")
 startingRoom = "res://src/Scenes/Level/Areas/Test/Test_1.tscn"
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_m8nwm")]
+[node name="Player" parent="." instance=ExtResource("1_m8nwm")]
 position = Vector2(163, 426)
 platform_on_leave = 2
 
