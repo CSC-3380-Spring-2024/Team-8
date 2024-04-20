@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dg3u5pmj8ngwu"]
+[gd_scene load_steps=11 format=3 uid="uid://dg3u5pmj8ngwu"]
 
 [ext_resource type="Script" path="res://src/Scripts/Misc/game.cs" id="1_7dmiw"]
 [ext_resource type="PackedScene" uid="uid://2124jypa8y06" path="res://src/Assets/Player/Player.tscn" id="1_m8nwm"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://2jlp4rbrae20" path="res://src/Scenes/Level/Test_Classic.tscn" id="3_vsag5"]
 [ext_resource type="Script" path="res://src/Scenes/HighJump.gd" id="5_csmyf"]
 [ext_resource type="Texture2D" uid="uid://c62mrym4j2hhq" path="res://addons/MetroidvaniaSystem/Themes/MF/Symbols/Item.png" id="6_ot00s"]
+[ext_resource type="Script" path="res://src/Scenes/doubleJump.gd" id="7_b6u22"]
 
 [sub_resource type="Environment" id="Environment_j5s1g"]
 
@@ -38,7 +39,7 @@ position = Vector2(-111, 455)
 script = ExtResource("5_csmyf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HighJump"]
-position = Vector2(32, -31.5)
+position = Vector2(34, -32)
 shape = SubResource("RectangleShape2D_acxis")
 
 [node name="Sprite2D" type="Sprite2D" parent="HighJump"]
@@ -46,4 +47,18 @@ position = Vector2(32.5, -31)
 scale = Vector2(5.0625, 4.875)
 texture = ExtResource("6_ot00s")
 
+[node name="doubleJump" type="Area2D" parent="."]
+position = Vector2(-262, 460)
+script = ExtResource("7_b6u22")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doubleJump"]
+position = Vector2(32, -31)
+shape = SubResource("RectangleShape2D_acxis")
+
+[node name="Sprite2D" type="Sprite2D" parent="doubleJump"]
+position = Vector2(32.5, -31)
+scale = Vector2(5.0625, 4.875)
+texture = ExtResource("6_ot00s")
+
 [connection signal="body_entered" from="HighJump" to="HighJump" method="_on_body_entered"]
+[connection signal="body_entered" from="doubleJump" to="doubleJump" method="_on_body_entered"]

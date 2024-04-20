@@ -4,6 +4,8 @@ using System;
 public partial class PlayerMove : CharacterBody2D
 {
 	Boolean highJump = false;
+	int jumpCount = 0;
+	Boolean doubleJump = false;
 	
 	private AnimatedSprite2D sprite;
 	[Export]
@@ -75,12 +77,21 @@ public partial class PlayerMove : CharacterBody2D
 				sprite.Stop();
 			velocity.Y = 0;
 		}
-		// Handle Jump.
+		// Handle doubleJump.
+		if (Input.IsActionJustPressed("ui_accept") && !IsOnFloor() && jumpCount < 2 && doubleJump == true)
+			if (highJump == true) {
+				velocity.Y = 2 * JumpVelocity; 
+				jumpCount = jumpCount + 1;}
+			else {
+				velocity.Y = JumpVelocity; 
+				jumpCount = jumpCount + 1;}
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
 			if (highJump == true) {
-				velocity.Y = 2 * JumpVelocity; }
-			else	 {
-				velocity.Y = JumpVelocity; }
+				velocity.Y = 2 * JumpVelocity; 
+				jumpCount = 1;}
+			else {
+				velocity.Y = JumpVelocity; 
+				jumpCount = 1;}
 		if (Input.IsActionJustReleased("ui_accept"))
 		{
 			velocity.Y = Velocity.Y/2f;
