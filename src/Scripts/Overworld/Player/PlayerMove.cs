@@ -3,6 +3,8 @@ using System;
 
 public partial class PlayerMove : CharacterBody2D
 {
+	Boolean highJump = false;
+	
 	private AnimatedSprite2D sprite;
 	[Export]
 	float Speed = 400.0f;
@@ -75,7 +77,10 @@ public partial class PlayerMove : CharacterBody2D
 		}
 		// Handle Jump.
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
-			velocity.Y = JumpVelocity;
+			if (highJump == true) {
+				velocity.Y = 2 * JumpVelocity; }
+			else	 {
+				velocity.Y = JumpVelocity; }
 		if (Input.IsActionJustReleased("ui_accept"))
 		{
 			velocity.Y = Velocity.Y/2f;
@@ -96,3 +101,4 @@ public partial class PlayerMove : CharacterBody2D
 		MoveAndSlide();
 	}
 }
+

@@ -1,13 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://dg3u5pmj8ngwu"]
+[gd_scene load_steps=10 format=3 uid="uid://dg3u5pmj8ngwu"]
 
 [ext_resource type="Script" path="res://src/Scripts/Misc/game.cs" id="1_7dmiw"]
 [ext_resource type="PackedScene" uid="uid://2124jypa8y06" path="res://src/Assets/Player/Player.tscn" id="1_m8nwm"]
 [ext_resource type="PackedScene" uid="uid://dbj7ikbcj0v1f" path="res://src/Scenes/Template/enemy.tscn" id="3_r265y"]
 [ext_resource type="PackedScene" uid="uid://2jlp4rbrae20" path="res://src/Scenes/Level/Test_Classic.tscn" id="3_vsag5"]
+[ext_resource type="Script" path="res://src/Scenes/HighJump.gd" id="5_csmyf"]
+[ext_resource type="Texture2D" uid="uid://c62mrym4j2hhq" path="res://addons/MetroidvaniaSystem/Themes/MF/Symbols/Item.png" id="6_ot00s"]
 
 [sub_resource type="Environment" id="Environment_j5s1g"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_pwwcx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acxis"]
+size = Vector2(84, 83)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_7dmiw")
@@ -27,3 +32,18 @@ layer_0/tile_data = PackedInt32Array(393220, 65536, 0, 393219, 65536, 0, 393218,
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_j5s1g")
 camera_attributes = SubResource("CameraAttributesPractical_pwwcx")
+
+[node name="HighJump" type="Area2D" parent="."]
+position = Vector2(-111, 455)
+script = ExtResource("5_csmyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HighJump"]
+position = Vector2(32, -31.5)
+shape = SubResource("RectangleShape2D_acxis")
+
+[node name="Sprite2D" type="Sprite2D" parent="HighJump"]
+position = Vector2(32.5, -31)
+scale = Vector2(5.0625, 4.875)
+texture = ExtResource("6_ot00s")
+
+[connection signal="body_entered" from="HighJump" to="HighJump" method="_on_body_entered"]
