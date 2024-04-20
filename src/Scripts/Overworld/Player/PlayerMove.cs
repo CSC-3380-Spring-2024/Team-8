@@ -6,6 +6,7 @@ public partial class PlayerMove : CharacterBody2D
 	Boolean highJump = false;
 	int jumpCount = 0;
 	Boolean doubleJump = false;
+	Boolean glide = false;
 	
 	private AnimatedSprite2D sprite;
 	[Export]
@@ -95,6 +96,10 @@ public partial class PlayerMove : CharacterBody2D
 		if (Input.IsActionJustReleased("ui_accept"))
 		{
 			velocity.Y = Velocity.Y/2f;
+		}
+		if (Input.IsActionJustPressed("ui_accept") && !IsOnFloor() && glide == true) 
+		{
+			velocity.Y = velocity.Y/2;
 		}
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
