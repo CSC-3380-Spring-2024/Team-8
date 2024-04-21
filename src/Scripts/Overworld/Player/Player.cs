@@ -1,8 +1,10 @@
 using Godot;
 using System;
 
-public partial class PlayerMove : CharacterBody2D
+public partial class Player : CharacterBody2D
 {
+	[Export]
+	int healthPoints = 20;
 	Boolean highJump = false;
 	int jumpCount = 0;
 	Boolean doubleJump = false;

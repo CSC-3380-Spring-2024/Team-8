@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4hop1yyr5ooj"]
+
+[ext_resource type="Texture2D" uid="uid://bh5iprx1npxxf" path="res://src/Assets/Background/spaceback.png" id="1_p1koh"]
+[ext_resource type="Texture2D" uid="uid://2o75jfhvopxr" path="res://src/Assets/Background/STARS2.png" id="2_8moih"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(574.333, 327)
+scale = Vector2(4.55556, 4.55556)
+texture = ExtResource("1_p1koh")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(593, 330)
+scale = Vector2(4.58333, 4.58333)
+texture = ExtResource("2_8moih")

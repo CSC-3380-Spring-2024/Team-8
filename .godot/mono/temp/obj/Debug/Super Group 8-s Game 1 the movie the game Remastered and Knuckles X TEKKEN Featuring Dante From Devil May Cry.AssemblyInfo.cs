@@ -14,7 +14,7 @@ using System.Reflection;
     "ing Dante From Devil May Cry")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a72a5b3f2603f0b99b2f05332f82cee2051a296")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+828a7dabb42ed5fb10547e17a7eed012d7c24c5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featur" +
     "ing Dante From Devil May Cry")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Super Group 8-s Game 1 the movie the game Remastered and Knuckles X TEKKEN Featur" +
