@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://2124jypa8y06"]
 
-[ext_resource type="Script" path="res://src/Scripts/Overworld/Player/PlayerMove.cs" id="1_gwfpd"]
+[ext_resource type="Script" path="res://src/Scripts/Overworld/Player/Player.cs" id="1_gwfpd"]
 [ext_resource type="Texture2D" uid="uid://bqs1npxmjya5p" path="res://src/Assets/Proto/standing.png" id="2_b6akm"]
 [ext_resource type="Texture2D" uid="uid://c71f62y7rfhnd" path="res://src/Assets/Proto/walking.png" id="3_4s8he"]
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/TurnComponent.cs" id="4_lmaxm"]
