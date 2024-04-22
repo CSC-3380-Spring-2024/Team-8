@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dxe2cd62fnibt"]
 
 [ext_resource type="Texture2D" uid="uid://8lihlucpaab1" path="res://src/Assets/Screen/cursor_finger.png" id="1_rj0mw"]
-[ext_resource type="Script" path="res://src/Scripts/Battle/General/char_panel.cs" id="1_wsvns"]
+[ext_resource type="Script" path="res://src/Scenes/Battle/char_panel.gd" id="1_tsiie"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pipp2"]
 bg_color = Color(0, 0.52549, 0.929412, 1)
@@ -63,7 +63,7 @@ offset_right = 230.0
 offset_bottom = 100.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_wsvns")
+script = ExtResource("1_tsiie")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

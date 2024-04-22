@@ -13,8 +13,12 @@ public partial class party_panels : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		allies = GetChildren();
-		allies[0].GetNode<TextureRect>("Panel/Focus").Show();
+		//Adds Panel1-Panel4 into array
+		allies.Add(GetChild(1));
+		allies.Add(GetChild(2));
+		allies.Add(GetChild(3));
+		allies.Add(GetChild(4));
+		allies[0].GetNode<TextureRect>("Focus").Show();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,7 +27,7 @@ public partial class party_panels : Node2D
 		if (Input.IsActionJustPressed("ui_accept") && selectState == false) {
 			GD.Print("Select action");
 			selectState = true;
-			allies[index].GetNode<TextureRect>("Panel/Focus").Hide();
+			allies[index].GetNode<TextureRect>("Focus").Hide();
 			allies[index].GetNode<NinePatchRect>("ActionMenu").Show();
 		}
 
@@ -31,7 +35,7 @@ public partial class party_panels : Node2D
 		if (Input.IsActionJustPressed("ui_cancel") && selectState == true) {
 				GD.Print("Canceled selection");
 				selectState = false;
-				allies[index].GetNode<TextureRect>("Panel/Focus").Show();
+				allies[index].GetNode<TextureRect>("Focus").Show();
 				allies[index].GetNode<NinePatchRect>("ActionMenu").Hide();
 				 
 			}
@@ -55,8 +59,8 @@ public partial class party_panels : Node2D
 
 	void switch_focus(int x, int y)
 	{
-		allies[x].GetNode<TextureRect>("Panel/Focus").Show();
-		allies[y].GetNode<TextureRect>("Panel/Focus").Hide();
+		allies[x].GetNode<TextureRect>("Focus").Show();
+		allies[y].GetNode<TextureRect>("Focus").Hide();
 	}
 
 }

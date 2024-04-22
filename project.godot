@@ -23,6 +23,7 @@ config/icon="res://src/Assets/Proto/icon.svg"
 [autoload]
 
 MetSys="*res://addons/MetroidvaniaSystem/Nodes/Singleton.tscn"
+State="*res://src/Scripts/Misc/State.gd"
 
 [display]
 

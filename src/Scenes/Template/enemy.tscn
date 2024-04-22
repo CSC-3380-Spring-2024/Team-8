@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Enemies/LeftRightPathing.gd" id="1_dgnur"]
 [ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="1_kmvmk"]
-[ext_resource type="Script" path="res://src/Scripts/Overworld/Enemies/PlayerContact.cs" id="3_xqavr"]
+[ext_resource type="Script" path="res://src/Scripts/Overworld/Enemies/battle_transition.gd" id="3_uqyk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q54c1"]
 
@@ -20,7 +20,7 @@ texture = ExtResource("1_kmvmk")
 shape = SubResource("RectangleShape2D_q54c1")
 
 [node name="Hitbox" type="Area2D" parent="."]
-script = ExtResource("3_xqavr")
+script = ExtResource("3_uqyk0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(-1, 0)

@@ -11,7 +11,7 @@ public partial class PlayerContact : Area2D
 		GD.Print("Instantiated");
 		GetTree().Root.AddChild(loadedScene);
 		QueueFree();
-		GetTree().Paused = true;
+		//GetTree().Paused = true;
 	}
 	
 	private void _on_body_entered(CharacterBody2D body)
