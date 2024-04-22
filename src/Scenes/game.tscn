@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dg3u5pmj8ngwu"]
+[gd_scene load_steps=15 format=3 uid="uid://dg3u5pmj8ngwu"]
 
 [ext_resource type="Script" path="res://src/Scripts/Misc/game.cs" id="1_7dmiw"]
 [ext_resource type="PackedScene" uid="uid://2124jypa8y06" path="res://src/Assets/Player/Player.tscn" id="1_m8nwm"]
@@ -6,13 +6,16 @@
 [ext_resource type="TileSet" uid="uid://xo0s1ffiq1t3" path="res://new_tile_set.tres" id="4_7sk1b"]
 [ext_resource type="Script" path="res://src/Scenes/HighJump.gd" id="5_csmyf"]
 [ext_resource type="Script" path="res://src/Scenes/HealthPickup.gd" id="5_ugss7"]
-[ext_resource type="Texture2D" uid="uid://c62mrym4j2hhq" path="res://addons/MetroidvaniaSystem/Themes/MF/Symbols/Item.png" id="6_ot00s"]
+[ext_resource type="Texture2D" uid="uid://cffqluvqknf38" path="res://src/Assets/Proto/heart.PNG" id="6_nbhrr"]
 [ext_resource type="Script" path="res://src/Scenes/doubleJump.gd" id="7_b6u22"]
 [ext_resource type="Script" path="res://src/Scenes/glide.gd" id="8_2wkve"]
-[ext_resource type="PackedScene" path="res://parallax_background.tscn" id="9_01mlu"]
+[ext_resource type="Texture2D" uid="uid://betdvjh34llk8" path="res://src/Assets/Proto/boots.PNG" id="8_d64ij"]
+[ext_resource type="PackedScene" uid="uid://d4hop1yyr5ooj" path="res://parallax_background.tscn" id="9_01mlu"]
+[ext_resource type="Texture2D" uid="uid://cpx24c60ecg4x" path="res://src/Assets/Proto/doublejump.PNG" id="10_m0s1j"]
+[ext_resource type="Texture2D" uid="uid://dcfpllnsbe3k1" path="res://src/Assets/Proto/glider.PNG" id="12_ygt3p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acxis"]
-size = Vector2(84, 83)
+size = Vector2(118, 98)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_7dmiw")
@@ -21,14 +24,6 @@ startingRoom = "res://src/Scenes/Level/Areas/Test/Test_1.tscn"
 [node name="Player" parent="." instance=ExtResource("1_m8nwm")]
 position = Vector2(144, 433)
 platform_on_leave = 2
-healthPoints = 20
-Speed = 400.0
-JumpHeight = -250.0
-timeToPeak = 0.5
-timeToFall = 0.5
-acceleration = 50.0
-friction = 12.0
-VariableJumpHeight = -125.0
 
 [node name="Bob" parent="." instance=ExtResource("3_r265y")]
 position = Vector2(-1924, 714)
@@ -50,13 +45,13 @@ position = Vector2(-310, 90)
 script = ExtResource("5_ugss7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HealthPickup"]
-position = Vector2(34, -32)
+position = Vector2(35.5, -32)
 shape = SubResource("RectangleShape2D_acxis")
 
 [node name="Sprite2D" type="Sprite2D" parent="HealthPickup"]
-position = Vector2(32.5, -31)
-scale = Vector2(5.0625, 4.875)
-texture = ExtResource("6_ot00s")
+position = Vector2(37.013, -29.96)
+scale = Vector2(1.02597, 1.08)
+texture = ExtResource("6_nbhrr")
 
 [node name="HighJump" type="Area2D" parent="."]
 position = Vector2(-3140, 680)
@@ -67,22 +62,22 @@ position = Vector2(34, -32)
 shape = SubResource("RectangleShape2D_acxis")
 
 [node name="Sprite2D" type="Sprite2D" parent="HighJump"]
-position = Vector2(32.5, -31)
-scale = Vector2(5.0625, 4.875)
-texture = ExtResource("6_ot00s")
+position = Vector2(35.4999, -33.9873)
+scale = Vector2(0.849998, 1.02532)
+texture = ExtResource("8_d64ij")
 
 [node name="doubleJump" type="Area2D" parent="."]
 position = Vector2(3031, 1088)
 script = ExtResource("7_b6u22")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="doubleJump"]
-position = Vector2(32, -31)
+position = Vector2(40, -31)
 shape = SubResource("RectangleShape2D_acxis")
 
 [node name="Sprite2D" type="Sprite2D" parent="doubleJump"]
-position = Vector2(32.5, -31)
-scale = Vector2(5.0625, 4.875)
-texture = ExtResource("6_ot00s")
+position = Vector2(36.5, -27)
+scale = Vector2(0.239463, 0.331325)
+texture = ExtResource("10_m0s1j")
 
 [node name="glide" type="Area2D" parent="."]
 position = Vector2(-297, -25)
@@ -93,9 +88,9 @@ position = Vector2(32, -29)
 shape = SubResource("RectangleShape2D_acxis")
 
 [node name="Sprite2D" type="Sprite2D" parent="glide"]
-position = Vector2(32.5, -31)
-scale = Vector2(5.0625, 4.875)
-texture = ExtResource("6_ot00s")
+position = Vector2(32, -26.8862)
+scale = Vector2(0.223881, 0.227642)
+texture = ExtResource("12_ygt3p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
