@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dg3u5pmj8ngwu"]
+[gd_scene load_steps=16 format=3 uid="uid://dg3u5pmj8ngwu"]
 
 [ext_resource type="Script" path="res://src/Scripts/Misc/game.cs" id="1_7dmiw"]
 [ext_resource type="PackedScene" uid="uid://2124jypa8y06" path="res://src/Assets/Player/Player.tscn" id="1_m8nwm"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d4hop1yyr5ooj" path="res://parallax_background.tscn" id="9_01mlu"]
 [ext_resource type="Texture2D" uid="uid://cpx24c60ecg4x" path="res://src/Assets/Proto/doublejump.PNG" id="10_m0s1j"]
 [ext_resource type="Texture2D" uid="uid://dcfpllnsbe3k1" path="res://src/Assets/Proto/glider.PNG" id="12_ygt3p"]
+[ext_resource type="Script" path="res://src/Scenes/HUD.gd" id="14_grvuy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acxis"]
 size = Vector2(118, 98)
@@ -96,7 +97,34 @@ texture = ExtResource("12_ygt3p")
 
 [node name="ParallaxBackground" parent="CanvasLayer" instance=ExtResource("9_01mlu")]
 
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("14_grvuy")
+
+[node name="Message" type="Label" parent="HUD"]
+top_level = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -498.0
+offset_top = -198.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="MessageTimer" type="Timer" parent="HUD"]
+wait_time = 1.5
+one_shot = true
+
 [connection signal="body_entered" from="HealthPickup" to="HealthPickup" method="_on_body_entered"]
+[connection signal="body_entered" from="HealthPickup" to="HUD" method="_on_health_pickup_body_entered"]
 [connection signal="body_entered" from="HighJump" to="HighJump" method="_on_body_entered"]
+[connection signal="body_entered" from="HighJump" to="HUD" method="_on_high_jump_body_entered"]
 [connection signal="body_entered" from="doubleJump" to="doubleJump" method="_on_body_entered"]
+[connection signal="body_entered" from="doubleJump" to="HUD" method="_on_double_jump_body_entered"]
 [connection signal="body_entered" from="glide" to="glide" method="_on_body_entered"]
+[connection signal="body_entered" from="glide" to="HUD" method="_on_glide_body_entered"]
+[connection signal="timeout" from="HUD/MessageTimer" to="HUD" method="_on_message_timer_timeout"]
