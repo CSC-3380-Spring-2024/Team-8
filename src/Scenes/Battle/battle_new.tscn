@@ -1,0 +1,855 @@
+[gd_scene load_steps=16 format=3 uid="uid://bg88x7t5bh43e"]
+
+[ext_resource type="Script" path="res://src/Scripts/Battle/General/battle_new.gd" id="1_4f1n8"]
+[ext_resource type="Texture2D" uid="uid://c8bic8n5kbgth" path="res://src/Assets/Proto/space background.png" id="2_3flmd"]
+[ext_resource type="Resource" uid="uid://ci1poy376ar7e" path="res://src/Resources/BOB.tres" id="2_m8tvg"]
+[ext_resource type="Texture2D" uid="uid://8lihlucpaab1" path="res://src/Assets/Screen/cursor_finger.png" id="3_lpv4h"]
+[ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="3_n8ae4"]
+
+[sub_resource type="Gradient" id="Gradient_itybu"]
+colors = PackedColorArray(0, 0.52549, 0.929412, 1, 0, 0.52549, 0.929412, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_whgnm"]
+gradient = SubResource("Gradient_itybu")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqsw1"]
+bg_color = Color(0, 0, 0, 0.490196)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 8.0
+expand_margin_top = 2.0
+expand_margin_right = 8.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aa2fh"]
+bg_color = Color(0, 0, 0, 0.490196)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 15.0
+expand_margin_top = 2.0
+expand_margin_right = 15.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pipp2"]
+bg_color = Color(0, 0.52549, 0.929412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8puc"]
+content_margin_bottom = 18.0
+bg_color = Color(0.822296, 0.0495786, 0.0279334, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kwnb"]
+bg_color = Color(0.0582782, 0.772325, 0.0488465, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_fw1p5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Interface/Node2D/EnemyContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yt7t7"]
+resource_name = "enemy_died"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Interface/Node2D/EnemyContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cxoy5"]
+_data = {
+"RESET": SubResource("Animation_fw1p5"),
+"enemy_died": SubResource("Animation_yt7t7")
+}
+
+[node name="Battle" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_4f1n8")
+enemy = ExtResource("2_m8tvg")
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="Node2D" type="Node2D" parent="Interface"]
+
+[node name="Background" type="TextureRect" parent="Interface/Node2D"]
+anchors_preset = -1
+anchor_left = 0.238
+anchor_top = 0.821
+anchor_right = 0.239
+anchor_bottom = 0.822
+offset_top = -0.5
+offset_right = 1150.85
+offset_bottom = 647.852
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3flmd")
+
+[node name="ActionMenu" type="NinePatchRect" parent="Interface/Node2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 617.0
+offset_top = 487.0
+offset_right = 847.0
+offset_bottom = 587.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_whgnm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Interface/Node2D/ActionMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -50.0
+offset_right = 115.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Interface/Node2D/ActionMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Attack" type="Button" parent="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+text = "ATTACK"
+
+[node name="Defend" type="Button" parent="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+text = "DEFEND"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Interface/Node2D/ActionMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Items" type="Button" parent="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqsw1")
+text = "ITEMS"
+
+[node name="Flee" type="Button" parent="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_aa2fh")
+text = "FLEE"
+
+[node name="Panel" type="Panel" parent="Interface/Node2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 328.0
+offset_top = 487.0
+offset_right = 558.0
+offset_bottom = 587.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pipp2")
+
+[node name="Focus" type="TextureRect" parent="Interface/Node2D/Panel"]
+visible = false
+layout_mode = 0
+offset_left = -24.0
+offset_top = 16.0
+offset_right = 24.0
+offset_bottom = 64.0
+texture = ExtResource("3_lpv4h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Interface/Node2D/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117647
+anchor_top = 0.226804
+anchor_right = 0.117647
+anchor_bottom = 0.226804
+offset_right = 59.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "VULPES"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpLevel" type="Label" parent="Interface/Node2D/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.670588
+anchor_top = 0.226804
+anchor_right = 0.670588
+anchor_bottom = 0.226804
+offset_left = 3.0
+offset_right = 62.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="Interface/Node2D/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57451
+anchor_top = 0.742268
+anchor_right = 0.57451
+anchor_bottom = 0.742268
+offset_left = -76.5
+offset_top = -19.0
+offset_right = 76.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_b8puc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5kwnb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Interface/Node2D/Panel/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Interface/Node2D"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 328.0
+offset_top = 512.0
+offset_right = 558.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pipp2")
+
+[node name="Focus" type="TextureRect" parent="Interface/Node2D/Panel2"]
+visible = false
+layout_mode = 0
+offset_left = -24.0
+offset_top = 16.0
+offset_right = 24.0
+offset_bottom = 64.0
+texture = ExtResource("3_lpv4h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Interface/Node2D/Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117647
+anchor_top = 0.226804
+anchor_right = 0.117647
+anchor_bottom = 0.226804
+offset_right = 59.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "P2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpLevel" type="Label" parent="Interface/Node2D/Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.670588
+anchor_top = 0.226804
+anchor_right = 0.670588
+anchor_bottom = 0.226804
+offset_left = 3.0
+offset_right = 62.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="Interface/Node2D/Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57451
+anchor_top = 0.742268
+anchor_right = 0.57451
+anchor_bottom = 0.742268
+offset_left = -76.5
+offset_top = -19.0
+offset_right = 76.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_b8puc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5kwnb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Interface/Node2D/Panel2/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionMenu" type="NinePatchRect" parent="Interface/Node2D/Panel2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -50.0
+offset_right = 115.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_whgnm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Interface/Node2D/Panel2/ActionMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -50.0
+offset_right = 115.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Interface/Node2D/Panel2/ActionMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Attack2" type="Button" parent="Interface/Node2D/Panel2/ActionMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+text = "ATTACK"
+
+[node name="Defend" type="Button" parent="Interface/Node2D/Panel2/ActionMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+text = "DEFEND"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Interface/Node2D/Panel2/ActionMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Items" type="Button" parent="Interface/Node2D/Panel2/ActionMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqsw1")
+text = "ITEMS"
+
+[node name="Flee" type="Button" parent="Interface/Node2D/Panel2/ActionMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_aa2fh")
+text = "FLEE"
+
+[node name="Panel3" type="Panel" parent="Interface/Node2D"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 593.0
+offset_top = 514.0
+offset_right = 823.0
+offset_bottom = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pipp2")
+
+[node name="Focus" type="TextureRect" parent="Interface/Node2D/Panel3"]
+visible = false
+layout_mode = 0
+offset_left = -24.0
+offset_top = 16.0
+offset_right = 24.0
+offset_bottom = 64.0
+texture = ExtResource("3_lpv4h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Interface/Node2D/Panel3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117647
+anchor_top = 0.226804
+anchor_right = 0.117647
+anchor_bottom = 0.226804
+offset_right = 59.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "P3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpLevel" type="Label" parent="Interface/Node2D/Panel3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.670588
+anchor_top = 0.226804
+anchor_right = 0.670588
+anchor_bottom = 0.226804
+offset_left = 3.0
+offset_right = 62.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="Interface/Node2D/Panel3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57451
+anchor_top = 0.742268
+anchor_right = 0.57451
+anchor_bottom = 0.742268
+offset_left = -76.5
+offset_top = -19.0
+offset_right = 76.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_b8puc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5kwnb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Interface/Node2D/Panel3/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionMenu" type="NinePatchRect" parent="Interface/Node2D/Panel3"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -50.0
+offset_right = 115.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_whgnm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Interface/Node2D/Panel3/ActionMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -50.0
+offset_right = 115.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Interface/Node2D/Panel3/ActionMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Attack3" type="Button" parent="Interface/Node2D/Panel3/ActionMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+text = "ATTACK"
+
+[node name="Defend" type="Button" parent="Interface/Node2D/Panel3/ActionMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+text = "DEFEND"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Interface/Node2D/Panel3/ActionMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Items" type="Button" parent="Interface/Node2D/Panel3/ActionMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqsw1")
+text = "ITEMS"
+
+[node name="Flee" type="Button" parent="Interface/Node2D/Panel3/ActionMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_aa2fh")
+text = "FLEE"
+
+[node name="Panel4" type="Panel" parent="Interface/Node2D"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 856.0
+offset_top = 512.0
+offset_right = 1086.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pipp2")
+
+[node name="Focus" type="TextureRect" parent="Interface/Node2D/Panel4"]
+visible = false
+layout_mode = 0
+offset_left = -24.0
+offset_top = 16.0
+offset_right = 24.0
+offset_bottom = 64.0
+texture = ExtResource("3_lpv4h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Interface/Node2D/Panel4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117647
+anchor_top = 0.226804
+anchor_right = 0.117647
+anchor_bottom = 0.226804
+offset_right = 59.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "P4"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExpLevel" type="Label" parent="Interface/Node2D/Panel4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.670588
+anchor_top = 0.226804
+anchor_right = 0.670588
+anchor_bottom = 0.226804
+offset_left = 3.0
+offset_right = 62.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="Interface/Node2D/Panel4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57451
+anchor_top = 0.742268
+anchor_right = 0.57451
+anchor_bottom = 0.742268
+offset_left = -76.5
+offset_top = -19.0
+offset_right = 76.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_b8puc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5kwnb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Interface/Node2D/Panel4/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionMenu" type="NinePatchRect" parent="Interface/Node2D/Panel4"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -50.0
+offset_right = 115.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_whgnm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Interface/Node2D/Panel4/ActionMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -50.0
+offset_right = 115.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Interface/Node2D/Panel4/ActionMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Attack4" type="Button" parent="Interface/Node2D/Panel4/ActionMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+text = "ATTACK"
+
+[node name="Defend" type="Button" parent="Interface/Node2D/Panel4/ActionMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+text = "DEFEND"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Interface/Node2D/Panel4/ActionMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Items" type="Button" parent="Interface/Node2D/Panel4/ActionMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqsw1")
+text = "ITEMS"
+
+[node name="Flee" type="Button" parent="Interface/Node2D/Panel4/ActionMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_aa2fh")
+text = "FLEE"
+
+[node name="EnemyContainer" type="VBoxContainer" parent="Interface/Node2D"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.435185
+anchor_right = 0.5
+anchor_bottom = 0.435185
+offset_left = 448.5
+offset_top = 139.0
+offset_right = 703.5
+offset_bottom = 425.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar2" type="ProgressBar" parent="Interface/Node2D/EnemyContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_b8puc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5kwnb")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Interface/Node2D/EnemyContainer/HPBar2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enemy" type="TextureRect" parent="Interface/Node2D/EnemyContainer"]
+layout_mode = 2
+texture = ExtResource("3_n8ae4")
+expand_mode = 4
+
+[node name="Textbox" type="Panel" parent="Interface/Node2D"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 1151.0
+offset_bottom = 108.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Interface/Node2D/Textbox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.5
+offset_top = -21.0
+offset_right = 267.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Interface/Node2D/Textbox"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = ">"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cxoy5")
+}
+
+[connection signal="pressed" from="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer/Defend" to="." method="_on_defend_pressed"]
+[connection signal="pressed" from="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer2/Flee" to="." method="_on_flee_pressed"]
+[connection signal="pressed" from="Interface/Node2D/Panel2/ActionMenu/VBoxContainer/HBoxContainer/Attack2" to="." method="_on_attack_2_pressed"]
+[connection signal="pressed" from="Interface/Node2D/Panel3/ActionMenu/VBoxContainer/HBoxContainer/Attack3" to="." method="_on_attack_3_pressed"]
+[connection signal="pressed" from="Interface/Node2D/Panel4/ActionMenu/VBoxContainer/HBoxContainer/Attack4" to="." method="_on_attack_4_pressed"]

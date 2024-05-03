@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlp72eyb01jux"]
+
+[ext_resource type="Script" path="res://src/Scripts/Battle/General/party_panels.cs" id="1_3syec"]
+[ext_resource type="PackedScene" uid="uid://dxe2cd62fnibt" path="res://src/Scenes/Template/char_panel.tscn" id="2_rc020"]
+
+[node name="PartyPanels" type="Node2D"]
+script = ExtResource("1_3syec")
+
+[node name="CharPanel1" parent="." instance=ExtResource("2_rc020")]
+offset_left = 64.0
+offset_top = 512.0
+offset_right = 294.0
+offset_bottom = 612.0
+
+[node name="CharPanel2" parent="." instance=ExtResource("2_rc020")]
+offset_left = 328.0
+offset_top = 512.0
+offset_right = 558.0
+offset_bottom = 612.0
+
+[node name="CharPanel3" parent="." instance=ExtResource("2_rc020")]
+offset_left = 593.0
+offset_top = 512.0
+offset_right = 823.0
+offset_bottom = 612.0
+
+[node name="CharPanel4" parent="." instance=ExtResource("2_rc020")]
+offset_left = 856.0
+offset_top = 512.0
+offset_right = 1086.0
+offset_bottom = 612.0
+
+[editable path="CharPanel1"]
+[editable path="CharPanel2"]
+[editable path="CharPanel3"]
+[editable path="CharPanel4"]

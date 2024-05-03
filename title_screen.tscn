@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://critqr67r6tia"]
+
+[ext_resource type="FontFile" uid="uid://ci5r77kkoj0i2" path="res://src/Fonts/Early GameBoy.ttf" id="1_qtmha"]
+[ext_resource type="Script" path="res://title_screen.gd" id="2_bnjx8"]
+[ext_resource type="PackedScene" uid="uid://d4hop1yyr5ooj" path="res://parallax_background.tscn" id="3_iq6kl"]
+[ext_resource type="Script" path="res://parallax_background.gd" id="4_6rxn8"]
+
+[sub_resource type="Theme" id="Theme_istph"]
+default_font = ExtResource("1_qtmha")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wll7e"]
+outline_size = 3
+outline_color = Color(0.6, 1, 1, 1)
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_istph")
+script = ExtResource("2_bnjx8")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -10.0
+offset_right = 84.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.62616, 3.62616)
+pivot_offset = Vector2(84, 65)
+text = "Unit VULPES"
+label_settings = SubResource("LabelSettings_wll7e")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -30.0
+offset_right = 36.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.6, 3.6)
+pivot_offset = Vector2(36, -20)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "PLAY"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "EXIT"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_iq6kl")]
+script = ExtResource("4_6rxn8")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

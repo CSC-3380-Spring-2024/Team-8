@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=3 uid="uid://yuothxgb8p5r"]
+
+[ext_resource type="Script" path="res://src/Scripts/Battle/General/battle_new.cs" id="1_f4ta2"]
+[ext_resource type="Texture2D" uid="uid://c8bic8n5kbgth" path="res://src/Assets/Proto/space background.png" id="2_3flmd"]
+[ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="3_n8ae4"]
+[ext_resource type="PackedScene" uid="uid://dlp72eyb01jux" path="res://src/Scenes/Battle/party.tscn" id="4_wwea4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oay2j"]
+content_margin_bottom = 18.0
+bg_color = Color(0.822296, 0.0495786, 0.0279334, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1uyb"]
+bg_color = Color(0.0582782, 0.772325, 0.0488465, 1)
+border_color = Color(1, 1, 1, 1)
+
+[node name="Battle" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_f4ta2")
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="Interface"]
+anchors_preset = -1
+anchor_left = 0.238
+anchor_top = 0.821
+anchor_right = 0.239
+anchor_bottom = 0.822
+offset_left = -274.176
+offset_top = -532.508
+offset_right = 876.672
+offset_bottom = 115.844
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3flmd")
+
+[node name="PartyPanels" parent="Interface" instance=ExtResource("4_wwea4")]
+
+[node name="EnemyContainer" type="VBoxContainer" parent="Interface"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.435185
+anchor_right = 0.5
+anchor_bottom = 0.435185
+offset_left = -127.5
+offset_top = -143.0
+offset_right = 127.5
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HPBar" type="ProgressBar" parent="Interface/EnemyContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_oay2j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1uyb")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Interface/EnemyContainer/HPBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+text = "HP: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyTexture" type="TextureRect" parent="Interface/EnemyContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_n8ae4")
+expand_mode = 4
+stretch_mode = 4

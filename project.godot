@@ -15,7 +15,7 @@ metroidvania_system/settings_file="res://src/Resources/Addons/MetSysSettings.tre
 [application]
 
 config/name="Unit V.U.L.P.E.S"
-run/main_scene="res://src/Scenes/game.tscn"
+run/main_scene="res://title_screen.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 run/max_fps=60
 config/icon="res://src/Assets/Proto/icon.svg"
@@ -23,6 +23,7 @@ config/icon="res://src/Assets/Proto/icon.svg"
 [autoload]
 
 MetSys="*res://addons/MetroidvaniaSystem/Nodes/Singleton.tscn"
+State="*res://src/Scripts/Misc/State.gd"
 
 [display]
 

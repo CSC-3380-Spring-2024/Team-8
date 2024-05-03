@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ci1poy376ar7e"]
+
+[ext_resource type="Script" path="res://src/Resources/BaseEnemy.gd" id="1_21xb1"]
+[ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="2_k8oi6"]
+
+[resource]
+script = ExtResource("1_21xb1")
+name = "Bob"
+texture = ExtResource("2_k8oi6")
+health = 150
+damage = 20

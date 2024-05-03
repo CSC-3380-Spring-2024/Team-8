@@ -13,6 +13,10 @@ public partial class Global : Node
 
 	public static TurnData[] partyTurns = new TurnData[4];
 	public static gameState state;
+	[Export]
+	public static TurnData.type active_turn = 0;
+	[Export]
+	public static TurnComponent involvedInBattle;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{

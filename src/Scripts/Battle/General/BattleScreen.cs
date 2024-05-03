@@ -1,11 +1,12 @@
 using Godot;
 using System;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 public partial class BattleScreen : Control
 {
 	Node container;
-	Node[] partyLabels;
+	static Node[] partyLabels;
 	Node Dialogue;
 
 	TurnData[] enemyData;
@@ -37,7 +38,7 @@ public partial class BattleScreen : Control
 		for(int i = 0; i < partyLabels.Length; i++)
 		{
 			partyLabels[i] = container.GetChild(i);
-			updateLabelData(i);
+			UpdateLabelData(i);
 		}
 		GD.Print(container.Name);
 		state = menuState.START;
@@ -68,12 +69,10 @@ public partial class BattleScreen : Control
 	{
 	}
 
-	void updateLabelData(int i)
+	public static void UpdateLabelData(int i)
 	{	
 		if(Global.partyTurns[i] != null)
 		{
-
-		
 			Label name = (Label)partyLabels[i].GetChild(0);
 			name.Show();
 			name.Text = Global.partyTurns[i].fighterName;
@@ -84,7 +83,6 @@ public partial class BattleScreen : Control
 			Label SP = (Label)partyLabels[i].GetChild(2);
 			SP.Show();
 			SP.Text = ("SP: " + Global.partyTurns[i].currentMP + "/" + Global.partyTurns[i].maxMP);
-			
 		}
 	}
 
