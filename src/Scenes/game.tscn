@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dg3u5pmj8ngwu"]
+[gd_scene load_steps=18 format=3 uid="uid://dg3u5pmj8ngwu"]
 
 [ext_resource type="Script" path="res://src/Scripts/Misc/game.cs" id="1_7dmiw"]
 [ext_resource type="PackedScene" uid="uid://2124jypa8y06" path="res://src/Assets/Player/Player.tscn" id="1_m8nwm"]
@@ -10,10 +10,12 @@
 [ext_resource type="Script" path="res://src/Scenes/doubleJump.gd" id="7_b6u22"]
 [ext_resource type="Script" path="res://src/Scenes/glide.gd" id="8_2wkve"]
 [ext_resource type="Texture2D" uid="uid://betdvjh34llk8" path="res://src/Assets/Proto/boots.PNG" id="8_d64ij"]
-[ext_resource type="PackedScene" path="res://parallax_background.tscn" id="9_01mlu"]
+[ext_resource type="PackedScene" uid="uid://d4hop1yyr5ooj" path="res://parallax_background.tscn" id="9_01mlu"]
 [ext_resource type="Texture2D" uid="uid://cpx24c60ecg4x" path="res://src/Assets/Proto/doublejump.PNG" id="10_m0s1j"]
 [ext_resource type="Texture2D" uid="uid://dcfpllnsbe3k1" path="res://src/Assets/Proto/glider.PNG" id="12_ygt3p"]
 [ext_resource type="Script" path="res://src/Scenes/HUD.gd" id="14_grvuy"]
+[ext_resource type="PackedScene" uid="uid://critqr67r6tia" path="res://title_screen.tscn" id="14_u6oo3"]
+[ext_resource type="PackedScene" uid="uid://bqgccg1q5xc41" path="res://FallingPlatform.tscn" id="15_ak6bn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acxis"]
 size = Vector2(118, 98)
@@ -97,6 +99,13 @@ texture = ExtResource("12_ygt3p")
 
 [node name="ParallaxBackground" parent="CanvasLayer" instance=ExtResource("9_01mlu")]
 
+[node name="TitleScreen" parent="CanvasLayer" instance=ExtResource("14_u6oo3")]
+visible = false
+offset_left = -4.0
+offset_top = -3.0
+offset_right = -4.0
+offset_bottom = -3.0
+
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("14_grvuy")
 
@@ -118,6 +127,9 @@ autowrap_mode = 2
 [node name="MessageTimer" type="Timer" parent="HUD"]
 wait_time = 1.5
 one_shot = true
+
+[node name="FallingPlatform" parent="." instance=ExtResource("15_ak6bn")]
+position = Vector2(-2202, 392)
 
 [connection signal="body_entered" from="HealthPickup" to="HealthPickup" method="_on_body_entered"]
 [connection signal="body_entered" from="HealthPickup" to="HUD" method="_on_health_pickup_body_entered"]
