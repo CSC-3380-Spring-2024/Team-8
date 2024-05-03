@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d4hop1yyr5ooj"]
 
-[ext_resource type="Texture2D" uid="uid://bh5iprx1npxxf" path="res://src/Assets/Background/spaceback.png" id="1_p1koh"]
-[ext_resource type="Texture2D" uid="uid://2o75jfhvopxr" path="res://src/Assets/Background/STARS2.png" id="2_8moih"]
+[ext_resource type="Texture2D" uid="uid://bh5iprx1npxxf" path="res://src/Background/spaceback.png" id="1_p1koh"]
+[ext_resource type="Texture2D" uid="uid://2o75jfhvopxr" path="res://src/Background/STARS2.png" id="2_8moih"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 scroll_ignore_camera_zoom = true

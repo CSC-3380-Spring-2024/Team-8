@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbj7ikbcj0v1f"]
+
+[ext_resource type="Script" path="res://src/Scripts/Overworld/Enemies/LeftRightPathing.gd" id="1_dgnur"]
+[ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="1_kmvmk"]
+[ext_resource type="Script" path="res://src/Scripts/Overworld/Enemies/battle_transition.gd" id="3_uqyk0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q54c1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opkmc"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_dgnur")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.34465e-07, 8.34465e-07)
+scale = Vector2(0.0166667, 0.0166667)
+texture = ExtResource("1_kmvmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q54c1")
+
+[node name="Hitbox" type="Area2D" parent="."]
+script = ExtResource("3_uqyk0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_opkmc")
+
+[node name="RayCast_Y" type="RayCast2D" parent="Hitbox"]
+position = Vector2(-10, 0)
+target_position = Vector2(0, 11)
+
+[node name="RayCast_X" type="RayCast2D" parent="Hitbox"]
+rotation = 1.5708
+target_position = Vector2(3.98199e-05, 11)
+
+[connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_body_entered"]
