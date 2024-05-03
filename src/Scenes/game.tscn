@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dg3u5pmj8ngwu"]
+[gd_scene load_steps=21 format=3 uid="uid://dg3u5pmj8ngwu"]
 
 [ext_resource type="Script" path="res://src/Scripts/Misc/game.cs" id="1_7dmiw"]
 [ext_resource type="PackedScene" uid="uid://2124jypa8y06" path="res://src/Assets/Player/Player.tscn" id="1_m8nwm"]
@@ -15,10 +15,17 @@
 [ext_resource type="Texture2D" uid="uid://dcfpllnsbe3k1" path="res://src/Assets/Proto/glider.PNG" id="12_ygt3p"]
 [ext_resource type="Script" path="res://src/Scenes/HUD.gd" id="14_grvuy"]
 [ext_resource type="PackedScene" uid="uid://critqr67r6tia" path="res://title_screen.tscn" id="14_u6oo3"]
-[ext_resource type="PackedScene" uid="uid://bqgccg1q5xc41" path="res://FallingPlatform.tscn" id="15_ak6bn"]
+[ext_resource type="Script" path="res://FallingPlatform.gd" id="16_lavp4"]
+[ext_resource type="PackedScene" uid="uid://2jlp4rbrae20" path="res://src/Scenes/Level/Test_Classic.tscn" id="17_eej8y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acxis"]
 size = Vector2(118, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldjgc"]
+size = Vector2(557, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slkd0"]
+size = Vector2(550, 95)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_7dmiw")
@@ -128,8 +135,24 @@ autowrap_mode = 2
 wait_time = 1.5
 one_shot = true
 
-[node name="FallingPlatform" parent="." instance=ExtResource("15_ak6bn")]
+[node name="FallingPlatform" type="CharacterBody2D" parent="."]
 position = Vector2(-2202, 392)
+up_direction = Vector2(0, 1)
+script = ExtResource("16_lavp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallingPlatform"]
+position = Vector2(259.5, 96)
+shape = SubResource("RectangleShape2D_ldjgc")
+
+[node name="Area2D" type="Area2D" parent="FallingPlatform"]
+position = Vector2(1736, 509)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallingPlatform/Area2D"]
+position = Vector2(-1477, -474.5)
+shape = SubResource("RectangleShape2D_slkd0")
+
+[node name="TileMap" parent="FallingPlatform" instance=ExtResource("17_eej8y")]
+layer_0/tile_data = PackedInt32Array(5, 131072, 2, -65531, 131072, 0, 4, 65536, 2, -65532, 65536, 0, 3, 65536, 2, -65533, 65536, 0, 2, 65536, 2, -65534, 65536, 0, 1, 65536, 2, -65535, 65536, 0, 0, 65536, 2, -65536, 65536, 0, 65535, 0, 2, -1, 0, 0)
 
 [connection signal="body_entered" from="HealthPickup" to="HealthPickup" method="_on_body_entered"]
 [connection signal="body_entered" from="HealthPickup" to="HUD" method="_on_health_pickup_body_entered"]
@@ -140,3 +163,4 @@ position = Vector2(-2202, 392)
 [connection signal="body_entered" from="glide" to="glide" method="_on_body_entered"]
 [connection signal="body_entered" from="glide" to="HUD" method="_on_glide_body_entered"]
 [connection signal="timeout" from="HUD/MessageTimer" to="HUD" method="_on_message_timer_timeout"]
+[connection signal="body_entered" from="FallingPlatform/Area2D" to="FallingPlatform" method="_on_area_2d_body_entered"]
