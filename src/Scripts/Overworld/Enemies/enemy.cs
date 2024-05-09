@@ -4,6 +4,7 @@ using System.Numerics;
 
 public partial class enemy : CharacterBody2D
 {
+	bool dead = false;
 	float speed = -120.0f;
 	float scaler = 0;
 	float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -18,6 +19,7 @@ public partial class enemy : CharacterBody2D
 	//ORIGINAL PLAYER POS = 144, 433
 	public override void _PhysicsProcess(double delta)
 	{
+		if (dead) {QueueFree();}
 		Godot.Vector2 velocity = Velocity;
 		Godot.Vector2 scale = Scale;
 		RayCast2D ray_Y = GetNode<RayCast2D>("Hitbox/RayCast_Y");
@@ -74,6 +76,7 @@ public partial class enemy : CharacterBody2D
 			{
 				node.SetPhysicsProcess(false);
 			}
+			dead = true;
 		}
 		else if (body.Name == "FallingPlatform") {
 			GD.Print("bobby boy fall down, go boom");

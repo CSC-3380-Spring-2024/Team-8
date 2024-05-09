@@ -8,6 +8,7 @@ var current_player_health = 0
 var current_enemy_health = 0
 var is_defending = false
 var array = []
+var rng = RandomNumberGenerator.new()
 
 func _ready():
 	display_text("Bob wants to fight! What will you do?")
@@ -39,6 +40,7 @@ func enemy_turn():
 	display_text("%s charges at you!" %enemy.name)
 	await textbox_closed
 	
+	
 	if is_defending:
 		is_defending = false
 		display_text("You blocked %s's attack!" %enemy.name)
@@ -46,11 +48,18 @@ func enemy_turn():
 		display_text("What will you do next?")
 		await textbox_closed
 	else:
+		if current_enemy_health <= 0:
+			display_text("Congratulations")
+			await textbox_closed
+			for node in array:
+				node.set_physics_process(true)
+			queue_free()
+		enemy.damage = rng.randi_range(1,25)
 		current_player_health = max(0, current_player_health - enemy.damage)
 		set_health($Interface/Node2D/Panel/HPBar, current_player_health, State.max_health)
 		display_text("%s dealt a whopping %d damage to you" %[enemy.name, enemy.damage])
 		await textbox_closed
-		if current_player_health == 0:
+		if current_player_health <= 0:
 			display_text("Oh no, %s defeated you..." %enemy.name)
 			await textbox_closed
 			display_text("We'll beat him next time")
@@ -78,15 +87,19 @@ func set_health(progress_bar, health, max_health):
 func _on_attack_pressed():
 	display_text($Interface/Node2D/Panel.get_node("Name").text + " swings at Bob!")
 	await textbox_closed
+	State.damage = rng.randi_range(10,20)
 	current_enemy_health = max(0, current_enemy_health - State.damage)
 	set_health($Interface/Node2D/EnemyContainer/HPBar2, current_enemy_health, enemy.health)
 	display_text("You dealt %d damage to %s" %[State.damage, enemy.name])
 	await textbox_closed
 	
-	if current_enemy_health == 0:
+	if current_enemy_health <= 0:
 		display_text("Congratulations, you defeated %s!" %enemy.name)
 		await textbox_closed
+		for node in array:
+			node.set_physics_process(true)
 		$AnimationPlayer.play("enemy_died")
+		queue_free()
 		
 	
 	enemy_turn()

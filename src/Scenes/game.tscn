@@ -34,6 +34,14 @@ layer_0/tile_data = PackedInt32Array(393220, 65536, 0, 393219, 65536, 0, 393218,
 [node name="Player" parent="." groups=["Moving Bodies"] instance=ExtResource("1_m8nwm")]
 position = Vector2(144, 433)
 platform_on_leave = 2
+healthPoints = null
+Speed = null
+JumpHeight = null
+timeToPeak = null
+timeToFall = null
+acceleration = null
+friction = null
+VariableJumpHeight = null
 
 [node name="Bob" parent="." groups=["Moving Bodies"] instance=ExtResource("3_r265y")]
 position = Vector2(-1924, 714)
