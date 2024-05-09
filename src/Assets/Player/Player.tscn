@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Player/TurnComponent.cs" id="4_lmaxm"]
 [ext_resource type="Resource" uid="uid://cdpiwi7ss1uns" path="res://src/Resources/Turn_Data/Player/Player.tres" id="5_rorgp"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_bml4b"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pl5c"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -20,9 +20,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvo1y"]
-radius = 101.995
-height = 730.159
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0g3f3"]
+size = Vector2(217.778, 772.487)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(410, 491)
@@ -38,12 +37,13 @@ script = ExtResource("1_gwfpd")
 unique_name_in_owner = true
 position = Vector2(16.3333, -67.4603)
 scale = Vector2(5.36667, 13.4921)
-sprite_frames = SubResource("SpriteFrames_bml4b")
-frame_progress = 0.463178
+sprite_frames = SubResource("SpriteFrames_1pl5c")
+frame_progress = 0.945343
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 20.6348)
 scale = Vector2(0.3, 0.3)
-shape = SubResource("CapsuleShape2D_tvo1y")
+shape = SubResource("RectangleShape2D_0g3f3")
 
 [node name="TurnComponent" type="Node" parent="."]
 script = ExtResource("4_lmaxm")

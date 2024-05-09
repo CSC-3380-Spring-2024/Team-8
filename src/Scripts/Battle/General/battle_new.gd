@@ -7,7 +7,7 @@ signal textbox_closed
 var current_player_health = 0
 var current_enemy_health = 0
 var is_defending = false
-
+var array = []
 
 func _ready():
 	display_text("Bob wants to fight! What will you do?")
@@ -17,6 +17,8 @@ func _ready():
 	set_health($Interface/Node2D/Panel3/HPBar, State.current_health, State.max_health)
 	set_health($Interface/Node2D/Panel4/HPBar, State.current_health, State.max_health)
 	set_health($Interface/Node2D/EnemyContainer/HPBar2, enemy.health, enemy.health)
+	
+	array = get_tree().get_nodes_in_group("Moving Bodies")
 	
 	current_player_health = State.current_health
 	current_enemy_health = enemy.health
@@ -61,7 +63,9 @@ func enemy_turn():
 func _on_flee_pressed():
 	display_text("We'll get him next time...")
 	await textbox_closed
-	get_tree().change_scene_to_file("res://src/Scenes/game.tscn")
+	queue_free()
+	for node in array:
+		node.set_physics_process(true)
 	
 
 func set_health(progress_bar, health, max_health):
