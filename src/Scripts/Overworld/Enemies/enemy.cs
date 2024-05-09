@@ -61,11 +61,6 @@ public partial class enemy : CharacterBody2D
 	private void _on_hitbox_body_entered(CharacterBody2D body)
 	{
 		if (body.Name == "Player") {
-			//Pause physics for all Nodes in "Moving Bodies" group
-			foreach (Node node in movingBodies)
-			{
-				node.SetPhysicsProcess(false);
-			}
 			GD.Print("Loading scene...");
 
 			//REMEMBER TO CHANGE PATH WHEN MOVING FILES !!
@@ -75,6 +70,17 @@ public partial class enemy : CharacterBody2D
 			this.AddChild(sceneInstance);
 			GD.Print("Scene loaded");
 			GD.Print("Starting battle...");
+			foreach (Node node in movingBodies)
+			{
+				node.SetPhysicsProcess(false);
+			}
+		}
+		else if (body.Name == "FallingPlatform") {
+			GD.Print("bobby boy fall down, go boom");
+			QueueFree();
+		}
+		else {
+			return;
 		}
 		
 	}

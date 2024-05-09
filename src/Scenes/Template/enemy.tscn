@@ -4,7 +4,8 @@
 [ext_resource type="Script" path="res://src/Scripts/Overworld/Enemies/enemy.cs" id="1_sh2fx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06nbt"]
-height = 20.0
+radius = 8.0
+height = 18.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mxxyy"]
 height = 20.0
@@ -18,6 +19,7 @@ scale = Vector2(0.0166667, 0.0166667)
 texture = ExtResource("1_kmvmk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_06nbt")
 
 [node name="Hitbox" type="Area2D" parent="."]

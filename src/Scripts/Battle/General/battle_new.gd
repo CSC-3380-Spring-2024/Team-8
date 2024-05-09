@@ -63,9 +63,10 @@ func enemy_turn():
 func _on_flee_pressed():
 	display_text("We'll get him next time...")
 	await textbox_closed
-	queue_free()
 	for node in array:
 		node.set_physics_process(true)
+	queue_free()
+	
 	
 
 func set_health(progress_bar, health, max_health):
