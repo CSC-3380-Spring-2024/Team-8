@@ -53,9 +53,9 @@ public partial class BattleScreen : Control
 	}
 
 
-    public override void _Input(InputEvent @event)
-    {
-        base._Input(@event);
+	public override void _Input(InputEvent @event)
+	{
+		base._Input(@event);
 		if(Input.IsActionJustPressed("ui_accept") & state == menuState.START)
 		{
 			state = menuState.SELECT;
@@ -63,9 +63,9 @@ public partial class BattleScreen : Control
 			d_label.Text = menuDialogue();
 			firstButton.GrabFocus();
 		}
-    }
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
+	}
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
 	{
 	}
 

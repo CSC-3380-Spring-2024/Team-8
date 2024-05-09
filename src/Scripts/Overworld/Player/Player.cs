@@ -99,7 +99,7 @@ public partial class Player : CharacterBody2D
 		{
 			velocity.Y = Velocity.Y/2f;
 		}
-		if (Input.IsActionJustPressed("ui_accept") && !IsOnFloor() && glide == true) 
+		if (Input.IsActionPressed("ui_glide") && !IsOnFloor() && glide == true) 
 		{
 			velocity.Y = velocity.Y/2;
 		}
