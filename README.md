@@ -2,7 +2,7 @@
 <<<<<<< Updated upstream
 =======
 
-main branch includes working executable
+develop branch includes working executable
 
 Instructions to start:
 
