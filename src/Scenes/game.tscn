@@ -1,12 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://dg3u5pmj8ngwu"]
+[gd_scene load_steps=23 format=3 uid="uid://dg3u5pmj8ngwu"]
 
 [ext_resource type="Script" path="res://src/Scripts/Misc/game.cs" id="1_7dmiw"]
 [ext_resource type="PackedScene" uid="uid://2124jypa8y06" path="res://src/Assets/Player/Player.tscn" id="1_m8nwm"]
 [ext_resource type="PackedScene" uid="uid://dbj7ikbcj0v1f" path="res://src/Scenes/Template/enemy.tscn" id="3_r265y"]
 [ext_resource type="TileSet" uid="uid://dydm7etii0x0w" path="res://new_tile_set.tres" id="4_7sk1b"]
 [ext_resource type="Script" path="res://src/Scenes/HighJump.gd" id="5_csmyf"]
+[ext_resource type="Script" path="res://src/Scenes/Bob2.cs" id="5_eeoh0"]
 [ext_resource type="Script" path="res://src/Scenes/HealthPickup.gd" id="5_ugss7"]
 [ext_resource type="Texture2D" uid="uid://cffqluvqknf38" path="res://src/Assets/Proto/heart.PNG" id="6_nbhrr"]
+[ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="6_xgwkc"]
 [ext_resource type="Script" path="res://src/Scenes/doubleJump.gd" id="7_b6u22"]
 [ext_resource type="Script" path="res://src/Scenes/glide.gd" id="8_2wkve"]
 [ext_resource type="Texture2D" uid="uid://betdvjh34llk8" path="res://src/Assets/Proto/boots.PNG" id="8_d64ij"]
@@ -17,6 +19,13 @@
 [ext_resource type="PackedScene" uid="uid://critqr67r6tia" path="res://title_screen.tscn" id="14_u6oo3"]
 [ext_resource type="PackedScene" uid="uid://bvunr4f4no2fd" path="res://end_screen.tscn" id="15_3qwll"]
 [ext_resource type="PackedScene" uid="uid://bqgccg1q5xc41" path="res://FallingPlatform.tscn" id="15_ak6bn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06nbt"]
+radius = 8.0
+height = 18.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mxxyy"]
+height = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acxis"]
 size = Vector2(118, 98)
@@ -35,14 +44,46 @@ layer_0/tile_data = PackedInt32Array(393220, 65536, 0, 393219, 65536, 0, 393218,
 [node name="Player" parent="." groups=["Moving Bodies"] instance=ExtResource("1_m8nwm")]
 position = Vector2(144, 433)
 platform_on_leave = 2
+healthPoints = null
+Speed = null
+JumpHeight = null
+timeToPeak = null
+timeToFall = null
+acceleration = null
+friction = null
+VariableJumpHeight = null
 
 [node name="Bob" parent="." groups=["Moving Bodies"] instance=ExtResource("3_r265y")]
 position = Vector2(-1924, 714)
 scale = Vector2(7, 7)
 
-[node name="Bob2" parent="." groups=["Moving Bodies"] instance=ExtResource("3_r265y")]
+[node name="Bob2" type="CharacterBody2D" parent="." groups=["Moving Bodies"]]
 position = Vector2(2637, -150)
 scale = Vector2(7, 7)
+script = ExtResource("5_eeoh0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bob2"]
+position = Vector2(8.34465e-07, 8.34465e-07)
+scale = Vector2(0.0166667, 0.0166667)
+texture = ExtResource("6_xgwkc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bob2"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_06nbt")
+
+[node name="Hitbox" type="Area2D" parent="Bob2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bob2/Hitbox"]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_mxxyy")
+
+[node name="RayCast_Y" type="RayCast2D" parent="Bob2/Hitbox"]
+position = Vector2(-10, 0)
+target_position = Vector2(0, 11)
+
+[node name="RayCast_X" type="RayCast2D" parent="Bob2/Hitbox"]
+rotation = 1.5708
+target_position = Vector2(3.98199e-05, 11)
 
 [node name="HealthPickup" type="Area2D" parent="."]
 position = Vector2(-79, 492)
@@ -135,6 +176,7 @@ one_shot = true
 [node name="FallingPlatform" parent="." instance=ExtResource("15_ak6bn")]
 position = Vector2(-2202, 392)
 
+[connection signal="body_entered" from="Bob2/Hitbox" to="Bob2" method="_on_hitbox_body_entered"]
 [connection signal="body_entered" from="HealthPickup" to="HealthPickup" method="_on_body_entered"]
 [connection signal="body_entered" from="HealthPickup" to="HUD" method="_on_health_pickup_body_entered"]
 [connection signal="body_entered" from="HighJump" to="HighJump" method="_on_body_entered"]
