@@ -30,14 +30,6 @@ floor_stop_on_slope = false
 floor_constant_speed = true
 safe_margin = 0.001
 script = ExtResource("1_gwfpd")
-healthPoints = null
-Speed = null
-JumpHeight = null
-timeToPeak = null
-timeToFall = null
-acceleration = null
-friction = null
-VariableJumpHeight = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -55,5 +47,4 @@ shape = SubResource("RectangleShape2D_0g3f3")
 
 [node name="TurnComponent" type="Node" parent="."]
 script = ExtResource("4_lmaxm")
-partyID = null
 turnData = ExtResource("5_rorgp")

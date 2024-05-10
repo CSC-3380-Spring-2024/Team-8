@@ -10,7 +10,7 @@ func show_message(text):
 func _on_health_pickup_body_entered(_body):
 	
 
-	$Message.text = "Health Increased by 1."
+	$Message.text = "HP increased. You feel better now."
 	$Message.show()
 	$MessageTimer.start()
 
@@ -24,13 +24,13 @@ func _on_high_jump_body_entered(_body):
 
 
 func _on_double_jump_body_entered(_body):
-	$Message.text = "Must be the shoes. Looks like you can jump in the air now."
+	$Message.text = "Must be the shoes. Feels like you can jump in the air now."
 	$Message.show()
 	$MessageTimer.start()
 	
 
 func _on_glide_body_entered(_body):
-	$Message.text = "I bet that'll help slow your fall."
+	$Message.text = "I bet that'll help slow your fall. Hold Shift in the air to try it out."
 	$Message.show()
 	$MessageTimer.start()
 	
