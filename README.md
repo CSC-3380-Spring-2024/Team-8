@@ -1,6 +1,6 @@
 # Team-8
 
-main branch includes working executable
+develop branch includes working executable
 
 Instructions to start:
 
