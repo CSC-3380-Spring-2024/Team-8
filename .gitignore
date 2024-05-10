@@ -12,3 +12,5 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 mono_crash.*.json
+
+./'Super Group*'
