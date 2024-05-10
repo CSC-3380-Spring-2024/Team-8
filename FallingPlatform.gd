@@ -10,7 +10,7 @@ func _physics_process(delta):
 		position.y += delta * 400
 		counter += 1
 
-func _on_area_2d_body_entered(body: CharacterBody2D):
+func _on_area_2d_body_entered(body):
 	if body.name == 'Player':
 		print("Body Entered. Falling.")
 		await get_tree().create_timer(2.5).timeout

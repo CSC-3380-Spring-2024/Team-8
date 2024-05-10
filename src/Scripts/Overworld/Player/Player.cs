@@ -4,6 +4,8 @@ using System;
 public partial class Player : CharacterBody2D
 {
 	[Export]
+	int numPotions = 0;
+	[Export]
 	int healthPoints = 20;
 	Boolean highJump = false;
 	int jumpCount = 0;
@@ -34,6 +36,7 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
 	{
+		Global.player = this;
 		JumpVelocity = (2.0f * JumpHeight) / timeToPeak;
 		JumpGravity = (-2.0f * JumpHeight) / (timeToPeak * timeToPeak);
 		FallGravity = (-2.0f * JumpHeight) / (timeToFall * timeToFall);

@@ -126,3 +126,10 @@ func _on_attack_4_pressed():
 
 
 
+
+
+func _on_items_pressed():
+	print("I've been here!")
+	var itemsMenu = load("res://ItemsMenu.tscn").instantiate()
+	add_child(itemsMenu)
+	pass # Replace with function body.

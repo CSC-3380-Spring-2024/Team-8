@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="playerData" load_steps=2 format=3 uid="uid://cdpiwi7ss1uns"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cdpiwi7ss1uns"]
 
 [ext_resource type="Script" path="res://src/Scripts/Battle/Player/playerData.cs" id="1_1je3x"]
 

@@ -31,7 +31,7 @@ size = Vector2(550, 95)
 script = ExtResource("1_7dmiw")
 startingRoom = "res://src/Scenes/Level/Areas/Test/Test_1.tscn"
 
-[node name="Player" parent="." instance=ExtResource("1_m8nwm")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_m8nwm")]
 position = Vector2(144, 433)
 platform_on_leave = 2
 

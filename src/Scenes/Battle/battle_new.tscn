@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://rgv3fpfrxk0q" path="res://src/Assets/Proto/Bob_T7FR.webp" id="3_n8ae4"]
 
 [sub_resource type="Gradient" id="Gradient_itybu"]
-colors = PackedColorArray(0, 0.52549, 0.929412, 1, 0, 0.52549, 0.929412, 1)
+offsets = PackedFloat32Array(0, 0.86, 1)
+colors = PackedColorArray(0, 0.52549, 0.929412, 1, 0, 0.52549, 0.929412, 1, 0, 0.52549, 0.929412, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_whgnm"]
 gradient = SubResource("Gradient_itybu")
@@ -849,6 +850,7 @@ libraries = {
 
 [connection signal="pressed" from="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer/Defend" to="." method="_on_defend_pressed"]
+[connection signal="pressed" from="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer2/Items" to="." method="_on_items_pressed"]
 [connection signal="pressed" from="Interface/Node2D/ActionMenu/VBoxContainer/HBoxContainer2/Flee" to="." method="_on_flee_pressed"]
 [connection signal="pressed" from="Interface/Node2D/Panel2/ActionMenu/VBoxContainer/HBoxContainer/Attack2" to="." method="_on_attack_2_pressed"]
 [connection signal="pressed" from="Interface/Node2D/Panel3/ActionMenu/VBoxContainer/HBoxContainer/Attack3" to="." method="_on_attack_3_pressed"]

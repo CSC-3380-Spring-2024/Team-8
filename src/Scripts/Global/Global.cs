@@ -10,9 +10,10 @@ public partial class Global : Node
 		Battle_Execute,
 		Pause
 	}
-
 	public static TurnData[] partyTurns = new TurnData[4];
 	public static gameState state;
+	[Export]
+	public static CharacterBody2D player;
 	[Export]
 	public static TurnData.type active_turn = 0;
 	[Export]

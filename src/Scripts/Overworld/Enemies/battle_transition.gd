@@ -9,11 +9,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 func _on_body_entered(body):
 	if body.name == "Player":
 		print("Collided with " + body.name)
+		$/root/PlayerRef.reference = body
 		get_tree().change_scene_to_file("res://src/Scenes/Battle/battle_new.tscn")
