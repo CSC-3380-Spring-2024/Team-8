@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvunr4f4no2fd"]
+
+[ext_resource type="FontFile" uid="uid://ci5r77kkoj0i2" path="res://src/Fonts/Early GameBoy.ttf" id="1_28q01"]
+[ext_resource type="PackedScene" uid="uid://d4hop1yyr5ooj" path="res://parallax_background.tscn" id="2_n26jn"]
+[ext_resource type="Script" path="res://parallax_background.gd" id="3_2bb77"]
+
+[sub_resource type="Theme" id="Theme_istph"]
+default_font = ExtResource("1_28q01")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wll7e"]
+outline_size = 3
+outline_color = Color(0.6, 1, 1, 1)
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -3.0
+offset_right = -4.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_istph")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -10.0
+offset_right = 84.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.62616, 3.62616)
+pivot_offset = Vector2(84, 65)
+text = "Thank you for playing
+        Unit VULPES
+                <
+ Have a good Summer!!"
+label_settings = SubResource("LabelSettings_wll7e")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_n26jn")]
+script = ExtResource("3_2bb77")
